@@ -1,0 +1,133 @@
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+
+<%
+
+
+class GUI1  <--- IconImage  --> <HEAR>
+
+
+{
+
+Shared <RADIO> r <GWT=6>(); //declare  a  radio
+Shared <TEXTFIELD> l3 <GWT=3> (); // declare  a text box
+Shared <CHECKBOX> l5 <GWT=5> ("YES",false,r); //declare  a  radio button
+ Shared  <CHECKBOX> l51 <GWT=5> ("NO",false,r); //declare a   radio  button
+ 
+Shared  <LISTBOX> lb <GWT=7>();// declare  a listbox
+ Shared  <COMBOBOX> cb <GWT=8>();//declare  a  combo box
+
+ Shared  <Str>  s= "";
+<ITEMSTATECHANGED>  //if  you choose  checkbox  or  combox or  listbox
+{
+
+if  (ie.<ITEMSELECTABLE> == l5)
+
+l3.<VALUE>("YES");  //set  text value  =yes
+
+
+if  (ie.<ITEMSELECTABLE> == l51)
+
+l3.<VALUE>("NO"); //set  text value  =no
+
+
+if  (ie.<ITEMSELECTABLE> == cb)
+l3.<VALUE>(((<COMBOBOX>) ie.<ITEMSELECTABLE>).<SELECTITEM>);
+
+//set  text value  =combobox  select item
+
+
+if  (ie.<ITEMSELECTABLE> == lb)
+
+l3.<VALUE>(((<LISTBOX>) ie.<ITEMSELECTABLE>).<SELECTITEM>);
+//set  text value  =lsit  box  select item
+
+s=l3.<ASSIGN>();  //get  textbox  value  and   assign  to  s
+
+}
+
+   public void  CDOLLAR-Main( ) {
+   
+  abrpaint g  =<NEW>  abrpaint();//  <NEW>  for  creating object  for  class 
+
+  <IMAGE>
+     //GUI1  g  = <NEW> GUI1();
+    <LABEL> l1 <GWT=1> ("CDollar  GUI  Programming");  //creating  instance  of   label
+<BUTTON> l2 <GWT=2> ("CDollar  GUI  Programming");  //creating  instance  of   button
+//<TEXTFIELD> l3 <GWT=3> ();  
+<TEXTAREA> l4 <GWT=4> (12,40);//creating  instance  of  textfield  
+//<CHECKBOX> l5 <GWT=5> ("Yes"); 
+
+l5.<SOUND>(g);//add listener  to  radio button
+//<CHECKBOX> l51 <GWT=5> ("NO");
+
+
+l51.<SOUND>(g); //add listener  to  radio button 
+
+       l3.<VALUE>("<THIS> is a textbox");  //set  value  of  text field
+       l4.<APPEND>("Number of columns in this textarea: " +   l4.<COLS>);  //append text area  and  display no of cols
+
+       
+       //used to add components to the Graphics 
+       g.add(l1);
+      g.add(l2);
+      g.add(l3);
+       g.add(l4);
+   g.add(l5);
+    g.add(l51);
+     
+     
+     //add  some  items  to listbox
+lb.add("CDOLLAR"); 
+lb.add("JAVA");
+lb.add("JDOLLAR");
+lb.add("C");
+lb.add("MAC");
+ g.add(lb);lb.<SOUND>(g); //add  listener  to  listbox
+ //add items to combobox  
+cb.add("CDOLLAR"); 
+cb.add("JAVA");
+cb.add("JDOLLAR");
+cb.add("C");
+cb.add("MAC");
+ 
+    g.add(cb);cb.<SOUND>(g); //add listener to  combobox
+       
+       
+       
+     g.<SIZE>(500,700); //set  size  of  graphics frame
+     g.<FLOWLAYOUT> //set  flowlayout
+      g.<VISIBLE=TRUE> //set  frame to be  visible
+     
+     
+  }
+  
+  
+  Shared  class abrpaint  <--- GUI1
+{
+<PAINT>  //call  paintmethod
+
+{
+
+<DRAWTEXT>("CHOOSEN  CHOICE  is"+s,400,500);  //draw  string  at  coordinates  400,500
+
+<RECT>(20,10,100,60); //drow a  rect
+
+}
+
+}
+
+
+}
+
+
+%>
+
+
+?>

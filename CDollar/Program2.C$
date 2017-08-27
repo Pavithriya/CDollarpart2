@@ -1,0 +1,49 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+<%
+
+
+public   class  Program2  extends Array
+
+{
+
+ public static  void  main(String args[])
+
+{
+
+ArrayList  ar= new  ArrayList ();
+	for  (int  i=0;i<=100000;i++)
+	ar.add(i);
+
+	
+	
+	
+	Array list1 = new  Array("ANIMALS ");
+	        list1.add("1 horse");
+		list1.add("2 pig");
+		list1.add("3 cow");
+		list1.add("4 goat");
+		list1.add("5 chicken");
+		
+	list1.add("6 ostrich");
+	list1.add(ar.toString());
+	list1.Display();
+
+
+}
+
+
+
+}
+%>
+
+
+?>
+
+

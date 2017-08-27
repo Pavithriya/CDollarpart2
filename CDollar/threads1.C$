@@ -1,0 +1,58 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+  
+  public  class  threads1  extends Thread  
+  
+  {
+  
+  
+  public  String str;
+  
+  public  void run()
+  {
+  
+  for  (int  i=0;i<=10;i++)
+  System.out.println(""+str);
+  
+  
+  }
+  
+   public static  void  main(String args[]) throws  Exception
+{
+
+threads1   t   =  new    threads1();
+
+t.str  =  "thread1";
+
+t.start();   //start    firstElement  thread
+
+threads1   t1   =  new   threads1();
+
+t1.str  =  "thread2";
+
+t1.start(); //   start   second   thread.
+
+//here   after  the   thread1   get  executed    thread 2  is  executed....
+
+
+
+}
+  
+  
+  }
+  
+  
+
+
+%>
+
+
+?>

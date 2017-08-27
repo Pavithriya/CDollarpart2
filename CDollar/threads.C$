@@ -1,0 +1,147 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+  
+ class threads
+
+{
+
+    public static  void  main(String args[]) 
+
+    {
+
+        My thread1 = new My("thread1: ");
+
+        My thread2 = new My("thread2: ");
+
+        thread1.start();
+
+        thread2.start();
+
+        boolean thread1IsAlive = true;
+
+        boolean thread2IsAlive = true;
+
+        do {
+
+           if (thread1IsAlive && !thread1.isAlive()) {
+
+               thread1IsAlive = false;
+
+              System.out.println("MY   DOG 1 is dead.");
+
+           }
+
+           if (thread2IsAlive && !thread2.isAlive()) {
+
+               thread2IsAlive = false;
+
+               System.out.println("MY  DOG 2 is dead.");
+
+           }
+
+        } while(thread1IsAlive || thread2IsAlive);
+
+    }
+
+}
+
+ 
+
+class My extends Thread
+
+{
+
+static String message[] ={ "CDollar", "is", "combination", "of", "JAVA", "and   c"};
+
+ 
+
+    public My(String id)
+
+    {
+
+        super(id);
+
+    }
+
+ 
+
+    public void run()
+
+    {
+
+        SyncOut.displayList("welcome",message);
+
+    }
+
+ 
+
+    void randomWait()
+
+    {
+
+        try {
+
+         Thread.sleep((long)(300));
+         wait();
+        // <!IFY>;
+         notifyall();
+       
+
+        } catch (InterruptedException x) {
+
+           System.out.println("InterruptedInvalid");
+
+        }
+
+    }
+
+}
+
+ 
+
+class SyncOut
+
+{
+
+public static <invalid> void displayList(String name,String list[])
+
+{
+
+for(int i=0;i<list.length;++i) {
+
+My t = (My) Thread.currentThread();
+
+t.randomWait();
+
+My t1 = (My) Thread.currentThread();
+
+t1.randomWait();
+
+t.join(t1);
+System.out.println(name+list[i]);
+
+}
+
+}
+
+} 
+
+
+  
+  
+
+
+%>
+
+
+?>
+
+

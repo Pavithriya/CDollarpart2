@@ -1,0 +1,49 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+
+
+public   class   WHILE
+
+{
+
+ public void  CDOLLAR-Main( )
+
+
+{
+
+int  a=0;
+
+while  (a <=10)
+{
+
+a++;
+
+CDollar.out.println("value="+a);
+
+
+}
+
+
+
+}
+
+
+
+
+}
+
+
+
+%>
+
+
+
+?>

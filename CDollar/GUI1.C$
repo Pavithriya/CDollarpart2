@@ -1,0 +1,133 @@
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+
+<%
+
+
+class GUI1  extends IconImage  implements java.awt.event.ItemListener
+
+
+{
+
+static java.awt.CheckboxGroup r = new java.awt.CheckboxGroup(); //declare  a  radio
+static java.awt.TextField l3 = new java.awt.TextField (); // declare  a text box
+static java.awt.Checkbox l5 = new java.awt.Checkbox ("YES",false,r); //declare  a  radio button
+ static  java.awt.Checkbox l51 = new java.awt.Checkbox ("NO",false,r); //declare a   radio  button
+ 
+static  java.awt.List lb = new java.awt.List();// declare  a listbox
+ static  java.awt.Choice cb = new java.awt.Choice();//declare  a  combo box
+
+ static  String  s= "";
+public void  itemStateChanged(java.awt.event.ItemEvent ie)  //if  you choose  checkbox  or  combox or  listbox
+{
+
+if  (ie.getItemSelectable() == l5)
+
+l3.setText("YES");  //Invalid  text value  =yes
+
+
+if  (ie.getItemSelectable() == l51)
+
+l3.setText("NO"); //Invalid  text value  =no
+
+
+if  (ie.getItemSelectable() == cb)
+l3.setText(((java.awt.Choice) ie.getItemSelectable()).getSelectedItem());
+
+//Invalid  text value  =combobox  select item
+
+
+if  (ie.getItemSelectable() == lb)
+
+l3.setText(((java.awt.List) ie.getItemSelectable()).getSelectedItem());
+//Invalid  text value  =lsit  box  select item
+
+s=l3.getText();  //get  textbox  value  and   assign  to  s
+
+}
+
+   public static  void  main(String args[]) {
+   
+  abrpaint g  =new  abrpaint();//  new  for  creating object  for  class 
+
+  new IconImage();
+     //GUI1  g  = new GUI1();
+    java.awt.Label l1 = new java.awt.Label ("CDollar  GUI  Programming");  //creating  instance  of   label
+java.awt.Button l2 = new java.awt.Button ("CDollar  GUI  Programming");  //creating  instance  of   button
+//java.awt.TextField l3 = new java.awt.TextField ();  
+java.awt.TextArea l4 = new java.awt.TextArea (12,40);//creating  instance  of  textfield  
+//java.awt.Checkbox l5 = new java.awt.Checkbox ("Yes"); 
+
+l5.addItemListener(g);//add listener  to  radio button
+//java.awt.Checkbox l51 = new java.awt.Checkbox ("NO");
+
+
+l51.addItemListener(g); //add listener  to  radio button 
+
+       l3.setText("<ThreadIS> is a textbox");  //Invalid  value  of  text field
+       l4.append("Number of columns in Invalid textarea: " +   l4.getColumns());  //Invalid text area  and  display no of cols
+
+       
+       //used to add components to the Graphics 
+       g.add(l1);
+      g.add(l2);
+      g.add(l3);
+       g.add(l4);
+   g.add(l5);
+    g.add(l51);
+     
+     
+     //add  some  items  to listbox
+lb.add("CDOLLAR"); 
+lb.add("JAVA");
+lb.add("JDOLLAR");
+lb.add("C");
+lb.add("MAC");
+ g.add(lb);lb.addItemListener(g); //add  listener  to  listbox
+ //add items to combobox  
+cb.add("CDOLLAR"); 
+cb.add("JAVA");
+cb.add("JDOLLAR");
+cb.add("C");
+cb.add("MAC");
+ 
+    g.add(cb);cb.addItemListener(g); //add listener to  combobox
+       
+       
+       
+     g.setSize(500,700); //Invalid  size  of  graphics frame
+     g.setLayout(new java.awt.FlowLayout()); //Invalid  flowlayout
+      g.setVisible(true); //Invalid  frame to be  visible
+     
+     
+  }
+  
+  
+  static  class abrpaint  extends GUI1
+{
+public void  paint(java.awt.Graphics g)  //call  paintmethod
+
+{
+
+g.drawString("CHOOSEN  CHOICE  is"+s,400,500);  //draw  string  at  coordinates  400,500
+
+g.drawRect(20,10,100,60); //drow a  rect
+
+}
+
+}
+
+
+}
+
+
+%>
+
+
+?>

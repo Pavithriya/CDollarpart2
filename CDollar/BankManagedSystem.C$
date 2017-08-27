@@ -1,0 +1,161 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+
+public  class   BankManagedSystem  extends Graphics implements java.awt.event.ItemListener, java.awt.event.ActionListener
+
+{
+ static String s="";
+ static  java.awt.Choice cb = new java.awt.Choice();
+static java.awt.TextField l3 = new java.awt.TextField (20); 
+  static java.awt.Button l31 = new java.awt.Button ("NEXT SCREEN"); 
+ static java.awt.Label l1 = new java.awt.Label ("NAME:"); 
+static Bank  a = new Bank();
+static java.awt.Menu  m  = new java.awt.Menu();
+public static  void  main(String args[])
+{
+
+
+
+
+
+//Bank  a = new Bank();
+
+int  ch=0;
+while (ch!=0)
+
+{
+
+
+
+}
+
+
+a.setSize(1000,900);
+ 
+  a.setLayout(new java.awt.FlowLayout());
+  
+  
+
+
+
+ 
+ cb.add("1.Create A/C");
+ cb.add("2.Update  A/C");
+ cb.add("3.Transcat A/C");
+ cb.add("4.Detail  A/c");
+ cb.add("5.Remove  A/c");
+ cb.add("6.View  A/c");
+ cb.add("7.Exit  A/c");
+ a.add(cb);cb.addItemListener(a);
+ 
+ a.add(l31);
+
+ a.add(m);
+m.addItemListener(a);
+
+  a.setVisible(true);
+}
+
+public  void actionPerformed(java.awt.event.ActionEvent e)
+{
+
+if  (e.getSource().equals(l31))
+{
+ if ( s=="1.Create A/C")
+ {
+
+  Bank  a1 = new Bank();
+    a1.add(l1);
+  a1.add(l3);
+
+ a1.setSize(1000,900);
+ 
+  a1.setLayout(new java.awt.FlowLayout());
+   a1.setVisible(true);
+ }
+ }
+}
+
+public void  itemStateChanged(java.awt.event.ItemEvent ie)
+{
+
+if  (ie.getItemSelectable() == cb)
+
+s=((java.awt.Choice) ie.getItemSelectable()).getSelectedItem();
+repaint();
+}
+
+static  class  Bank extends BankManagedSystem
+{
+public void  paint(java.awt.Graphics g)
+{
+
+setForeground(java.awt.Color.blue);
+
+setBackground(java.awt.Color.blue);
+g.fillRect (0,0,1200,1200); 
+g.setColor(java.awt.Color.white);
+g.drawString("CUSTOMER  ACCOUNT  BANKING MANAGEMENT  SYSTEM",450,200);
+g.drawString("---------------------------------------------",450,230);
+g.drawString(" W E L C O M E   T O   M A I N   M E N U",450,280);
+g.drawString(" 1. Create    New  Account",450,330);
+g.drawString(" 2. Update   INFORMATION  of  the  Existing  Account",450,360);
+g.drawString(" 3. For   Transcations",450,390);
+
+g.drawString(" 4. Check  the  details  of  the  existing Account",450,420);
+
+g.drawString(" 5. Removing  Existing Account",450,450);
+g.drawString(" 6. View Customer's  List",450,480);
+g.drawString(" 7. Exit",450,520);
+g.drawString("Enter  Your  CHOICE [1,2,3,4,5,6,7]",150,620);
+g.drawString(s+" IS  SELECTED",450,620);
+g.setColor(java.awt.Color.white);
+cb.setBounds(170,620,100,50);
+l31.setBounds(600,620,100,50);
+
+ l31.addActionListener(this);
+screen1(g);
+
+}
+
+
+public   void  screen1(java.awt.Graphics g)
+{
+
+if ( s=="1.Create A/C")
+{
+
+
+g.drawString("CUSTOMER  ACCOUNT  BANKING MANAGEMENT  SYSTEM",450,200);
+g.drawString("---------------------------------------------",450,230);
+g.drawString(" W E L C O M E   T O  NEW  CUSTOMER  CREATION  M E N U",450,280);
+
+
+l1.setBounds(100,200,100,100);
+
+l3.setBounds(300,200,100,50);
+
+}
+
+}
+
+}
+
+
+}
+
+
+%>
+
+
+
+
+?>

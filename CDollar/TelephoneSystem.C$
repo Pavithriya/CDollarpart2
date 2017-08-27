@@ -1,0 +1,352 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+<%
+
+public class   TelephoneSystem  extends   Graphics implements java.awt.event.ActionListener , java.awt.event.ItemListener
+
+{
+ static String s=""; static  java.awt.Choice cb = new java.awt.Choice();
+ 
+static java.awt.TextField l3 = new java.awt.TextField (10); 
+static java.awt.TextField l32 = new java.awt.TextField (10); 
+static java.awt.TextField l33 = new java.awt.TextField (10); 
+static java.awt.TextField level = new java.awt.TextField (10);
+static java.awt.TextField transfer = new java.awt.TextField (10);
+static java.awt.TextField data = new java.awt.TextField (10);
+static java.awt.Menu  m  = new java.awt.Menu();
+
+static java.awt.PopupMenu  mpp  = new java.awt.PopupMenu();
+
+
+static java.awt.CheckboxMenuItem  mi  = new java.awt.CheckboxMenuItem("EXIT"); 
+  static java.awt.Button l31 = new java.awt.Button ("NEXT SCREEN"); static java.awt.MenuBar  mb  = new java.awt.MenuBar();
+ static java.awt.Label l1 = new java.awt.Label ("Telephone Class: "); 
+ static java.awt.Label t1 = new java.awt.Label ("CHILD:");
+ static java.awt.Label t11 = new java.awt.Label ("Activity:");
+  static java.awt.Label level1 = new java.awt.Label ("LEVEL:");
+  static java.awt.Label transfer1 = new java.awt.Label ("Transfer:");
+    static java.awt.Label data1 = new java.awt.Label ("DATA:");
+ static java.awt.Button addd = new java.awt.Button ("ADD"); 
+ 
+ 
+ static java.awt.Button update = new java.awt.Button ("UPDATE"); 
+ 
+ static java.awt.Button delete = new java.awt.Button ("DELETE"); 
+ 
+ 
+static Telephone  a = new Telephone();
+
+static Telephone  a1 = new Telephone();
+protected void finalize() 
+{
+
+
+a=null;a1=null;
+System.gc();
+}
+
+
+
+ 
+
+
+
+
+public static  void  main(String args[])
+{
+
+
+System.gc();
+
+
+
+a.setSize(1000,900);
+ 
+  a.setLayout(new java.awt.FlowLayout());
+  m.add(mi);
+  mb.add(m);
+
+ 
+mi.addActionListener(a);
+
+
+
+
+
+ 
+ cb.add("1.Create Telephone  Form");
+ cb.add("2.Create Telephone  Graph");
+ cb.add("3.Exit Telephone System");
+ a.add(cb);cb.addItemListener(a);
+  
+a.add(l31);
+l31.addActionListener(a1);
+addd.addActionListener(a1);
+delete.addActionListener(a1);
+update.addActionListener(a1);
+
+
+  a.setVisible(true);
+ 
+}
+
+public  void actionPerformed(java.awt.event.ActionEvent e)
+{
+
+
+
+if  (e.getSource().equals(l31))
+{
+ if ( s=="1.Create Telephone  Form")
+ {
+a.setVisible(false);
+
+    a1.add(l1); 
+  a1.add(l3);
+a1.add(t1);a1.add(l32);
+a1.add(t11);
+a1.add(l33);
+a1.add(level1);
+a1.add(level);
+a1.add(transfer);a1.add(transfer1);
+a1.add(data);a1.add(data1);
+a1.add(addd);
+a1.add(update);
+a1.add(delete);
+
+ System.gc();
+ 
+  
+ a1.setSize(1000,900);
+
+
+   a1.setVisible(true);
+   
+   
+
+ }
+ 
+ else if ( s=="2.Create Telephone  Graph")
+ 
+ {
+ 	System.gc();
+
+  a.setVisible(false);
+ 	
+ 	System.gc();
+ 
+ //wilmix code 
+
+ new TreeDragTest2();
+
+ 
+   a1.setVisible(false);
+               
+ 
+ }
+ 
+ 
+ 
+ }
+ 
+//update
+
+
+if  (e.getSource().equals(update))
+   
+   {
+
+try{   
+		
+String  l31=  l3.getText();
+String  l322=  l32.getText();
+  String  datas=  data.getText();
+String  l333=  l33.getText();
+String  tr=  transfer.getText();
+int ll=  Integer.parseInt(level.getText());
+
+
+ process.updateOracleDB(l31, l322,datas ,l333, tr, ll);  
+
+         
+      }catch(Exception e4){
+         System.out.println( e4.getClass().getName() + ": " + e4.getMessage() );
+      }
+
+   }
+   
+   
+
+ if  (e.getSource().equals(addd))
+   
+   {
+
+try{   
+		
+String  l31=  l3.getText();
+String  l322=  l32.getText();
+  String  datas=  data.getText();
+String  l333=  l33.getText();
+String  tr=  transfer.getText();
+String  ll= level.getText();
+
+
+//javawdbaconn.javaWDBAQUERY("datastores", "USEDATABASE", "dbpwds", "C:\\Programs\\WNOSQL\\WNOSQLProgramfiles\\WNOSQL-cod");
+
+
+ //javawdbaconn.javaWDBAUSERQUERY("dbuser", "dbpwds", "wilmix78", "wilmix78");
+
+//String  q="SELECTRVAL from Telecom 3 to 33 , 1 to 7 ?= A By 1 1 : {0} : {0} :{0}";
+
+  //javawdbaconn.WDBAQUERY(q);
+
+
+// System.out.println(""+Secure.RetreiveSecure("outInvalid.wdba" ,0)); 
+
+
+
+// process.oracledbinsert(process.sno(),l31, l322,datas ,l333, tr, ll);  
+
+         
+      }catch(Exception e4){
+         System.out.println( e4.getClass().getName() + ": " + e4.getMessage() );
+      }
+   l3.setEchoChar('*');
+   }
+   
+   
+   //deletion
+   
+   
+   if  (e.getSource().equals(delete))
+   
+   {
+
+try{   
+		 String  datas=  data.getText();
+
+     process.oracledbdelete(datas);       
+         
+      }catch(Exception e4){
+         System.out.println( e4.getClass().getName() + ": " + e4.getMessage() );
+      }
+   
+   
+   }
+}
+
+public void  itemStateChanged(java.awt.event.ItemEvent ie)
+{
+
+if  (ie.getItemSelectable() == cb)
+
+s=((java.awt.Choice) ie.getItemSelectable()).getSelectedItem();
+
+
+
+
+repaint();
+}
+
+
+
+  static class  Telephone extends TelephoneSystem  
+{
+
+
+
+public void  paint(java.awt.Graphics g)
+{
+
+setForeground(java.awt.Color.blue);
+
+setBackground(java.awt.Color.blue);
+g.fillRect (0,0,1200,1200); 
+g.setColor(java.awt.Color.white);
+g.drawString("TELEPHONE MANAGEMENT  SYSTEM",100,150);
+g.drawString("---------------------------------------------",100,200);
+cb.setBounds(170,620,100,50);
+l31.setBounds(600,620,100,50);
+setMenuBar(mb);
+//l31.addActionListener(this);
+//addd.addActionListener(this);
+//delete.addActionListener(this);
+
+screen1(g);
+
+
+
+
+
+
+}
+
+
+public   void  screen1(java.awt.Graphics g)
+{
+
+
+if ( s=="1.Create Telephone  Form")
+{
+
+
+
+setForeground(java.awt.Color.blue);
+
+setBackground(java.awt.Color.blue);
+g.fillRect (0,0,1200,1200); 
+g.setColor(java.awt.Color.white);
+g.drawString("TELEPHONE MANAGEMENT  SYSTEM",100,150);
+g.drawString("---------------------------------------------",100,200);
+l1.setBounds(100,200-100,100,50);
+
+l3.setBounds(300,200-100,100,50);
+t1.setBounds(100,300-150,100,50);
+
+l32.setBounds(300,300-150,100,50);
+
+
+t11.setBounds(100,400-200,100,50);
+l33.setBounds(300,400-200,100,50);
+level1.setBounds(100,500-200,100,50);
+level.setBounds(300,500-200,100,50);
+
+transfer1.setBounds(100,600-200,100,50);
+transfer.setBounds(300,600-200,100,50);
+
+transfer1.setBounds(100,600-200,100,50);
+transfer.setBounds(300,600-200,100,50);
+data1.setBounds(100,700-200,100,50);
+data.setBounds(300,700-200,100,50);
+
+addd.setBounds(550,300,100,50);
+update.setBounds(550,300,300,50);
+delete.setBounds(550,300,650,50);
+
+
+}
+
+}
+
+
+
+
+
+
+}
+
+
+}
+
+
+%>
+
+
+
+
+?>

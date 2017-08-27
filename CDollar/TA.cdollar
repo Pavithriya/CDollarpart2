@@ -1,0 +1,110 @@
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+class Person {
+   // Data members of person
+   
+   Person(){}
+   
+   public  String   c(String x) 
+   
+   {
+   
+   x="Personname:"+x;
+   return(x);
+   }
+public Person(String x)  { Print.Println("Person::Person(int ) called",x);   }
+}
+ 
+class Faculty  {
+
+public Faculty(String x)
+
+{
+
+<NEW> Person(x);
+       Print.Println("Faculty::Faculty(int ) called",x);
+    }
+}
+ 
+ 
+class Student  {
+   // data members of Student
+      
+  Student(){}
+   
+   public  String   c(String x) 
+   
+   {
+   
+   x="Studentname:"+x;
+   return(x);
+   }
+   
+public  Student(String x) {
+<NEW> Person(x);
+
+   
+        Print.Println("Student::Student(int ) called", x);
+    }
+}
+
+
+ 
+class TA   {
+    TA(String x,String  x1)  {
+    
+                EXTEND <<OBJECT>> list11 = <NEW> EXTEND <<OBJECT>> ("BUCKETSof  EXTEND");
+		     list11.KeyAdd(<NEW> Person(x));
+		      list11.add(<NEW>  Student(x1));
+                  
+                      
+                     
+                  
+		list11.Display(list11);
+		    Print.Println("TA::TA(int ) called",x);
+	
+    Print.Println("TA::TA(int ) called",x1);
+    
+    
+                    
+                    
+                
+    
+    
+    
+     Pipe <<OBJECT>> list111 = <NEW> Pipe <<OBJECT>> ("BUCKETS of  Pipe");
+		     list111.KeyAdd(<NEW> Person().c( x)+"" );
+		      list111.add(<NEW>  Student().c( x1)+" ");
+                  
+                      
+                     
+                  
+	
+	
+    CDollar.out.println(""+list111.DisplayO(list111,0));
+        CDollar.out.println(""+list111.DisplayO(list111,1));
+        
+         CDollar.out.println("***********************************");
+        list111.Display(list111);
+    }
+     
+ 
+public void  CDOLLAR-Main( )
+{
+    <NEW>  TA("Paravan","MADHAN Prabhu");
+       <NEW>  TA("Bharathar","Wilmix  jemin j");
+}
+
+}
+%>
+
+
+
+?>

@@ -1,0 +1,73 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+   class  animate extends Graphics 
+
+{
+
+
+
+
+
+
+ public static  void  main(String args[])
+{
+abr  a  = new abr();
+
+
+
+
+
+ a.setSize(500,700);
+     
+     a.setLayout(new java.awt.FlowLayout());
+ a.setVisible(true);
+    
+
+}
+
+
+static  class abr  extends animate
+{
+public void  paint(java.awt.Graphics g)
+
+{
+
+g.setColor(java.awt.Color.orange);
+for(int  i1=0; i1<=1400;i1++)
+for(int  i=0; i<=1400;i++)
+{
+
+
+g.drawRect(100,10+i1,60,50+i1);
+g.drawRect(500,10+i1,60,50+i1);
+g.drawRect(100+i1,10,60+i1,50);
+g.drawRect(500+i1,10,60+i1,50);
+}
+
+g.setColor(java.awt.Color.blue);
+g.drawString("SLING V.1 Developed  by WSIT @ 2015",200,400);
+
+}
+
+
+
+
+
+
+
+}
+}
+%>
+
+
+?>
+
+

@@ -1,0 +1,125 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+<%
+
+ class Main
+{
+	public  Main()
+	{
+		super();
+	}
+
+	public static void main()
+	{
+	Print.Println("\nList  of   Technologies  in  year ","2016 ");	
+	      LL1 list = new LL1();
+	}
+}
+
+
+
+ class LL1
+{
+	
+	private LL1 goat = null;
+
+	private String datum = null;
+public LL1()
+	{
+	
+	
+	LL1 list = new LL1("0 C");
+		list.add("1 CDOLLAR");
+		list.add("2 GDOLLAR");
+		list.add("3 CHDOLLAR");
+		list.add("4 JDOLLAR");
+		list.add("5 JSTAR");
+		list.add("6 JSAUCER");
+
+		
+		for (int i = 0; i != list.size(); i = i + 1)
+		{
+			Print.Println("",list.get(i).toString());
+		}
+		
+	}
+
+	public LL1(String datum)
+	{
+		super();
+		this.datum = datum;
+	}
+
+	public void add(String datum)
+	{
+		if (goat != null)
+		{
+			goat.add(datum);
+			return;
+		}
+
+		goat = new LL1(datum);
+	}
+
+	public String get(int i)
+	{
+		if (i == 0)
+			return datum;
+
+		return goat.get(i - 1);
+	}
+
+	public int size()
+	{
+		if (goat == null)
+			return 1;
+
+		return goat.size() + 1;
+	}
+}
+
+   class  abc11 
+
+{
+ public static  void  main(String args[])
+
+{
+
+int i;
+//for ( i=0;i<=10000-1;i+=4)
+
+String i1="weew";
+Print.Println("wilmix",i1);
+Print.Println("  \njemin","is going");
+
+ArrayList   ar2 =  new  ArrayList();
+
+ar2.add("100");
+Main  m  =new  Main();
+m.main();
+
+Print.Println("jeminjhjhjh",ar2.toString());
+//Invalid1 list = new Invalid1();
+
+		
+		
+		
+
+}
+
+
+}
+
+
+%>
+
+
+?>
+
+

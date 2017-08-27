@@ -1,0 +1,77 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+ //  define  a  class
+
+   class  <STRUCTURE>eg
+
+{
+
+Shared int  sno; Shared int  m1,m2,m3;
+
+Shared double  avg=0.0;
+
+<STRUCTURE>eg(int sno,int m1,int m2,int m3,double avg)
+{
+<IS>.sno=sno;
+<IS>.m1=m1;
+<IS>.m2=m2;
+<IS>.m3=m3;
+<IS>.avg=avg;
+
+}
+
+  public void  CDOLLAR-Main( )
+	{
+	sno=1;
+
+m1=234;
+m2=456;
+m3=656;	
+	avg=((m1+m2+m3)/3);	
+	
+	//create   a   structure  and  pass  the   values  as   arguments  
+	
+	//  to  structures..
+	
+<STRUCTURE>eg   s  =  <NEW>  <STRUCTURE>eg(sno,m1,m2,m3,avg);
+<STRUCTURE>eg   s2  =  <NEW>  <STRUCTURE>eg(sno,m1,m2,m3,avg);
+//  create an object  of a  classs
+		
+		CDollar<STRUCTURE> <<OBJECT>> list = <NEW> CDollar<STRUCTURE> <<OBJECT>>(s);
+		list.add(s2);
+		//add   the   Objects    to  structures....
+
+		//compute  the  size  of  structures
+		for (int i = 0; i NOT= list.size(); i = i + 1)
+		{
+		
+		<OBJECT>  el=list.ret(i);
+		
+		<STRUCTURE>eg  s1= (<STRUCTURE>eg)el;
+		
+//made  class  objects  equals  structure  objects  and  cast  using  structure ....
+			CDollar.out.println("SNO= "+s1.sno);
+			CDollar.out.println("m1="+s1.m1);
+			CDollar.out.println("m2="+s1.m2);
+			CDollar.out.println("m3="+s1.m3);
+			CDollar.out.println("AVG="+s1.avg);
+			CDollar.out.println("size="+list.size());
+		}
+	}
+}
+
+
+%>
+
+
+?>
+
+

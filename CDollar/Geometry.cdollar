@@ -1,0 +1,42 @@
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+
+class Polygon {
+  Shared int width, height;
+  public Shared int set_values (int a, int b)
+      { width=a; height=b; return(0); }
+}
+
+class Rectangle  <--- Polygon {
+  public int area()
+      { return width*height; }
+}
+
+class Triangle  <--- Polygon {
+  public int area()
+      { return width*height/2; }
+}
+
+class  Geome<TRY>{
+ public void  CDOLLAR-Main( ) {
+  Rectangle rect = <NEW>  Rectangle();
+  Triangle trgl= <NEW> Triangle();
+  
+  int t= Polygon.set_values (4,5)  * Polygon.set_values (4,5);
+  Print.Println( "Rect area=",rect.area());
+  Print.Println( "Triange  Area=",trgl.area());
+  
+}
+}
+%>
+
+
+
+?>

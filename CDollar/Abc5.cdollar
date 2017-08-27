@@ -1,0 +1,49 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+
+abstract  class  Abc51
+
+{
+
+  abstract void display();
+
+
+
+
+
+
+
+}
+
+public  class  Abc5  <--- Abc51 
+
+{
+
+ Shared void display()
+{
+Print.Println("Wilmix","jemin");
+}
+ public void  CDOLLAR-Main( )
+
+{
+
+display();
+
+
+}
+
+}
+
+%>
+
+
+
+?>

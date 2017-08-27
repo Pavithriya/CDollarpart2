@@ -1,0 +1,80 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+   class  abcde <--- Graphics 
+
+{
+
+
+
+
+
+
+ public void  CDOLLAR-Main( )
+{
+abr  a  = <NEW> abr();
+
+
+
+
+
+ a.<SIZE>(500,700);
+     
+     a.<FLOWLAYOUT>
+ a.<VISIBLE=TRUE>
+    
+
+}
+
+
+Shared  class abr  <--- abcde
+{
+<PAINT>
+
+{
+//Color  c  =  <NEW> Color();
+
+for(int  i=0; i<=600;i++)
+{
+
+<DRAWTEXT>("CHOOSEN  CHOICE  is",400,500);
+<SETCOLOUR>(COLOR=red);
+<OVAL>(10+i,10+i,50+i,50+i);
+<FILLOVAL>(70+i,90+i,140+i,100+i);
+<SETCOLOUR>(COLOR=blue);
+<OVAL>(190+i,10+i,90+i,30+i);
+<RECT>(100+i,10+i,60+i,50+i);
+<SETCOLOUR>(COLOR=cyan);
+<FILLRECT>(100+i,10+i,60+i,50+i);
+<ROUNDRECT>(190+i,10+i,60+i,50+i,15+i,15+i);
+<SETCOLOUR>(COLOR=green);
+<ARC>(10+i,20+i,150+i,190+i,160+i,60+i);
+<FILLARC>(230+i,15+i,150+i,200+i,150+i,75+i);
+
+if ( i== 300)  i=i-1;
+}
+
+
+}
+
+
+
+
+
+
+
+}
+}
+%>
+
+
+?>
+
+

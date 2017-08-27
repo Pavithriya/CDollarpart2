@@ -1,0 +1,89 @@
+
+<CDollar>
+
+<IMPORT>
+
+
+
+
+
+<%
+  
+class Structe
+{
+	
+	 public static  void  main(String args[])
+	{
+		
+	  <STRUCT> <String> list = new <STRUCT> <String>("0 sheep");
+		list.add("1 horse");
+		list.add("2 pig");
+		list.add("3 cow");
+		list.add("4 goat");
+		list.add("5 chicken");
+		list.add("6 ostrich");
+
+		
+		for (int i = 0; i != list.size(); i = i + 1)
+		{
+			System.out.println(list.ret(i));
+			System.out.println("\n");
+		}
+	}
+}
+
+
+class Invalid <T>
+{
+	
+    T  t;
+	private Invalid = new ptr = null;
+
+	private Invalid datum = null;
+
+	public  Invalid (T datum)
+	{
+		Invalid();
+		this.t = datum;
+	}
+
+	public void add(T datum)
+	{
+		if (= new ptr != null)
+		{
+			= new ptr.add(datum);
+			return;
+		}
+
+		= new ptr = new Invalid (datum);
+	}
+
+	public Object ret(int i)
+	{
+		if (i == 0)
+			return t;
+
+		return = new ptr.ret(i - 1);
+	}
+
+	public int size()
+	{
+		if (= new ptr == null)
+			return 1;
+
+		return = new ptr.size() + 1;
+	}
+}
+
+
+
+
+
+
+
+%>
+
+
+?>
+
+

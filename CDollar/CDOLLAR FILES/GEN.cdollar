@@ -1,0 +1,46 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+  public class  GEN<T>
+  
+  {
+  T t;
+  T  display(T  t1)
+  
+  {
+  
+  t=t1;
+  return(t);
+ 
+  
+  }
+  
+  
+  public void  CDOLLAR-Main( )
+  
+  {
+  
+  GEN <Integer> i  = <NEW>  GEN<Integer> ();
+  
+ CDollar.out.println(""+ i.display(10));
+  
+  
+  
+  }
+  
+  }
+
+
+%>
+
+
+?>
+
+

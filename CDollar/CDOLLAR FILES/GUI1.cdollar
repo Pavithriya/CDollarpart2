@@ -1,0 +1,131 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+
+<%
+
+
+class GUI1  <--- IconImage  --> <HEAR>
+
+
+{
+
+Shared <RADIO> r <GWT=6>(); 
+Shared <TEXTFIELD> l3 <GWT=3> (); 
+Shared <CHECKBOX> l5 <GWT=5> ("YES",false,r);
+ Shared  <CHECKBOX> l51 <GWT=5> ("NO",false,r);
+ 
+Shared  <LISTBOX> lb <GWT=7>();
+ Shared  <COMBOBOX> cb <GWT=8>();
+
+ Shared  <Str>  s= "";
+<ITEMSTATECHANGED>
+{
+
+if  (ie.<ITEMSELECTABLE> == l5)
+
+l3.<VALUE>("YES");
+
+
+if  (ie.<ITEMSELECTABLE> == l51)
+
+l3.<VALUE>("NO");
+
+
+if  (ie.<ITEMSELECTABLE> == cb)
+l3.<VALUE>(((<COMBOBOX>) ie.<ITEMSELECTABLE>).<SELECTITEM>);
+
+
+if  (ie.<ITEMSELECTABLE> == lb)
+
+l3.<VALUE>(((<LISTBOX>) ie.<ITEMSELECTABLE>).<SELECTITEM>);
+
+s=l3.<ASSIGN>();
+
+}
+
+   public void  CDOLLAR-Main( ) {
+   
+  abrpaint g  =<NEW>  abrpaint();
+
+  <IMAGE>
+     //GUI1  g  = <NEW> GUI1();
+    <LABEL> l1 <GWT=1> ("CDollar  GUI  Programming");  
+<BUTTON> l2 <GWT=2> ("CDollar  GUI  Programming");  
+//<TEXTFIELD> l3 <GWT=3> ();  
+<TEXTAREA> l4 <GWT=4> (12,40);  
+//<CHECKBOX> l5 <GWT=5> ("Yes"); 
+
+l5.<SOUND>(g);
+//<CHECKBOX> l51 <GWT=5> ("NO");
+
+
+l51.<SOUND>(g);
+
+       l3.<VALUE>("<THIS> is a textbox");
+       l4.<APPEND>("Number of columns in this textarea: " +   l4.<COLS>);
+
+       //the add() method of the Frame class is
+       //used to add components to the frame
+       g.add(l1);
+      g.add(l2);
+      g.add(l3);
+       g.add(l4);
+   g.add(l5);
+    g.add(l51);
+     
+lb.add("CDOLLAR"); 
+lb.add("JAVA");
+lb.add("JDOLLAR");
+lb.add("C");
+lb.add("MAC");
+ g.add(lb);lb.<SOUND>(g);
+ 
+cb.add("CDOLLAR"); 
+cb.add("JAVA");
+cb.add("JDOLLAR");
+cb.add("C");
+cb.add("MAC");
+ 
+    g.add(cb);cb.<SOUND>(g);
+       
+       
+       
+     g.<SIZE>(500,700); 
+     g.<FLOWLAYOUT>
+      g.<VISIBLE=TRUE>
+     
+     
+  }
+  
+  
+  Shared  class abrpaint  <--- GUI1
+{
+<PAINT>
+
+{
+
+<DRAWTEXT>("CHOOSEN  CHOICE  is"+s,400,500);
+
+<RECT>(20,10,100,60);
+
+}
+
+}
+
+
+}
+
+
+%>
+
+
+?>
+
+

@@ -1,0 +1,34 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+   class  CLIENTSERVER
+
+{
+
+ public void  CDOLLAR-Main( )
+{
+
+int  c=0;
+while(c==0)
+<CLIENT>("wsit","1099");
+
+//<SERVER>("1099");
+
+}
+
+}
+
+
+%>
+
+
+?>
+
+

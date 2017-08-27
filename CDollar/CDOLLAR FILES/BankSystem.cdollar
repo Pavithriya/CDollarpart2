@@ -1,0 +1,279 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+
+public class   BankSystem  <---   Graphics --> <HEAR>, <SEE>
+
+{
+ Shared <Str> s="";
+ Shared  <COMBOBOX> cb <GWT=8>();
+Shared <TEXTFIELD> l3 <GWT=3> (10); 
+Shared <TEXTFIELD> l32 <GWT=3> (10); 
+Shared <TEXTFIELD> l33 <GWT=3> (10); 
+Shared <TEXTFIELD> l34 <GWT=3> (10); 
+Shared <TEXTFIELD> l35 <GWT=3> (10); 
+Shared <TEXTFIELD> l36 <GWT=3> (10); 
+ Shared  <COMBOBOX> cb1 <GWT=8>(); Shared <LABEL> t6 <GWT=1> ("ACCOUNT TYPE:");
+ Shared  <COMBOBOX> cb2 <GWT=8>(); Shared <LABEL> t7 <GWT=1> ("SCHEME:");
+Shared <MENU>  m  = <NEW> <MENU>();
+
+Shared <POPUPMENU>  mpp  = <NEW> <POPUPMENU>();
+
+
+Shared <CHECKBOXMENUITEM>  mi  = <NEW> <CHECKBOXMENUITEM>("EXIT"); 
+  Shared <BUTTON> l31 <GWT=2> ("NEXT SCREEN"); Shared <MENUBAR>  mb  = <NEW> <MENUBAR>();
+ Shared <LABEL> l1 <GWT=1> ("NAME:"); 
+ Shared <LABEL> t1 <GWT=1> ("DATE of  Birth:");Shared <LABEL> t2 <GWT=1> ("Citizenship no:");Shared <LABEL> t3 <GWT=1> ("Address:");Shared <LABEL> t4 <GWT=1> ("PhoneNO:");
+ Shared <LABEL> t5 <GWT=1> ("AMOUNT:");
+ 
+Shared Bank  a = <NEW> Bank();
+
+Shared Bank  a1 = <NEW> Bank();
+~ 
+{
+
+
+a=null;a1=null;cb1=null;cb2=null;
+<RECYCLE>;
+}
+
+
+Shared <SCROLLBAR> scroll  = <NEW> <SCROLLBAR>(<SCROLLBAR>.<Horizontal>,1,1,1,100);
+
+
+Shared <SCROLLBAR> scroll1  = <NEW> <SCROLLBAR>(<SCROLLBAR>.<Vertical>,1,1,1,100);
+
+public void  CDOLLAR-Main( )
+{
+
+
+<RECYCLE>;
+
+
+
+a.<SIZE>(1000,900);
+ 
+  a.<FLOWLAYOUT>
+  m.add(mi);
+  mb.add(m);
+
+ 
+mi.<IT>(a);
+
+a.add(scroll);
+
+a.add(scroll1);
+
+
+
+ 
+ cb.add("1.Create A/C");
+ cb.add("2.Update  A/C");
+ cb.add("3.Transcat A/C");
+ cb.add("4.Detail  A/c");
+ cb.add("5.Remove  A/c");
+ cb.add("6.View  A/c");
+ cb.add("7.Exit  A/c");
+ a.add(cb);cb.<SOUND>(a);
+  <AList> t =  <NEW>  <AList>();
+  t.add("Fixed Deposit  for  1  year");
+ t.add("Fixed Deposit  for  2  year");
+ t.add("Fixed Deposit  for  3  year");
+ 
+ 
+ <WR>  it= t.record();
+<STRUCTURE> <<Str>> list = <NEW> <STRUCTURE> <<Str>>("----CHOOSE ONLY  ONE  OPTION---");
+ while(it.<HAS>)
+ {
+ 
+<OBJECT>  el=it.<NEXT>;
+
+list.add(el.StringConvert());
+ }
+for (int i = 0; i NOT= list.size(); i = i + 1)
+		{
+		
+		<OBJECT>  el=list.ret(i);
+ cb2.add(el.StringConvert()); 
+ }
+ a.add(l31);
+//a.<ADJUSTMENTLISTENER>(<ADJUSTSCROLLBAR>{});
+
+  a.<VISIBLE=TRUE>
+}
+
+<ACTIONPERFORMED>
+{
+
+if  (e.getSource().<EQUALS>(l31))
+{
+ if ( s=="1.Create A/C")
+ {
+a.<VISIBLE=FALSE>
+
+    a1.add(l1); 
+  a1.add(l3);
+a1.add(t1);a1.add(l32);
+
+a1.add(t2);a1.add(l33);
+
+a1.add(t3);a1.add(l34);
+a1.add(t4);a1.add(l35);
+a1.add(t5);a1.add(l36);
+  cb1.add("SAVING A/C");
+ cb1.add("CURRENT A/C"); 
+
+ a1.add(t6);<RECYCLE>;
+ a1.add(cb1);cb1.<SOUND>(a1); 
+ a1.add(t7);
+ a1.add(cb2);cb2.<SOUND>(a1);
+ <RECYCLE>;
+  
+ a1.<SIZE>(1000,900);
+  a1.<GRIDLAYOUT>(8,2));
+
+   a1.<VISIBLE=TRUE>
+   
+
+ }
+ }
+}
+
+<ITEMSTATECHANGED>
+{
+
+if  (ie.<ITEMSELECTABLE> == cb)
+
+s=((<COMBOBOX>) ie.<ITEMSELECTABLE>).<SELECTITEM>;
+<REPAINT>
+}
+
+  Shared class  Bank <--- BankSystem  
+{
+
+
+
+<PAINT>
+{
+
+<SETFOREGROUND>(COLOR=blue);
+
+<SETBACKGROUND>(COLOR=blue);
+<FILLRECT> (0,0,1200,1200); 
+<SETCOLOUR>(COLOR=white);
+<DRAWTEXT>("CUSTOMER  ACCOUNT  BANKING MANAGEMENT  SYSTEM",450,200);
+<DRAWTEXT>("---------------------------------------------",450,230);
+<DRAWTEXT>(" W E L C O M E   T O   M A I N   M E N U",450,280);
+<DRAWTEXT>(" 1. Create    New  Account",450,330);
+<DRAWTEXT>(" 2. Update   INFORMATION  of  the  Existing  Account",450,360);
+<DRAWTEXT>(" 3. For   Transcations",450,390);
+
+<DRAWTEXT>(" 4. Check  the  details  of  the  existing Account",450,420);
+
+<DRAWTEXT>(" 5. Removing  Existing Account",450,450);
+<DRAWTEXT>(" 6. View Customer's  List",450,480);
+<DRAWTEXT>(" 7. Exit",450,520);
+<DRAWTEXT>("Enter  Your  CHOICE [1,2,3,4,5,6,7]",150,620);
+<DRAWTEXT>(s+" IS  SELECTED",450,620);
+<SETCOLOUR>(COLOR=white);
+cb.<SET><BOUNDS>(170,620,100,50);
+l31.<SET><BOUNDS>(600,620,100,50);
+<BARS>(mb); 
+ l31.<IT>(<IS>);
+screen1(g);
+
+<WINDOW> lb  =  <NEW> <WINDOW>(<IS>);
+
+lb.<SIZE>(300,200);
+
+lb.<LOCATE>(300,200);
+lb.<VISIBLE=TRUE>
+a.add(lb);
+
+
+
+
+
+
+
+}
+
+<ADJUSTSCROLLBAR> 
+
+{
+if  (<ADJUSTABLE>==scroll)
+
+scroll1.<SET>Value(scroll.getValue());
+
+}
+public   void  screen1(<DRAW> g)
+{
+
+if ( s=="1.Create A/C")
+{
+
+
+
+<SETFOREGROUND>(COLOR=blue);
+
+<SETBACKGROUND>(COLOR=blue);
+<FILLRECT> (0,0,1200,1200); 
+<SETCOLOUR>(COLOR=white);
+<DRAWTEXT>("CUSTOMER  ACCOUNT  BANKING MANAGEMENT  SYSTEM",450,200);
+<DRAWTEXT>("---------------------------------------------",450,230);
+l1.<SET><BOUNDS>(100,200-100,100,50);
+
+l3.<SET><BOUNDS>(300,200-100,100,50);
+t1.<SET><BOUNDS>(100,300-150,100,50);
+
+l32.<SET><BOUNDS>(300,300-150,100,50);
+t2.<SET><BOUNDS>(100,400-150,100,50);
+
+l33.<SET><BOUNDS>(300,400-150,100,50);
+
+t3.<SET><BOUNDS>(100,500-150,100,50);
+
+l34.<SET><BOUNDS>(300,500-150,100,50);
+t4.<SET><BOUNDS>(100,600-150,100,50);
+
+l35.<SET><BOUNDS>(300,600-150,100,50);
+t5.<SET><BOUNDS>(100,700-150,100,50);
+
+l36.<SET><BOUNDS>(300,700-150,100,50);
+
+
+t6.<SET><BOUNDS>(600,200-150,100,50);
+cb1.<SET><BOUNDS>(700,200-100,100,50);
+t7.<SET><BOUNDS>(600,300-150,100,50);
+cb2.<SET><BOUNDS>(700,300-150,100,50);
+
+
+
+}
+
+}
+
+
+
+
+
+
+}
+
+
+}
+
+
+%>
+
+
+
+
+?>

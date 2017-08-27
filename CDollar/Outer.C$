@@ -1,0 +1,38 @@
+
+<CDollar>
+
+<IMPORT>
+
+<%
+
+
+class Outer {
+
+ private int privInt = 10;
+ 
+  
+ public void createInnerClass() {
+
+ Inner inClass = new Inner();
+ inClass.access();
+ }
+ 
+
+ class Inner {  
+   
+  public void access() {
+
+  System.out.println("The outer classs  privInt is " + privInt);
+
+  } 
+
+ }
+
+
+}
+
+%>
+
+
+
+?>

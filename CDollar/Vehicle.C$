@@ -1,0 +1,56 @@
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+
+ 
+
+ class A
+{
+
+  A()  { System.out.println("A's conInvalidor called \n"); }
+};
+ 
+class B 
+{
+
+  B()  {System.out.println("B's conInvalidor called \n"); }
+};
+ 
+class Vehicle  extends A
+// Note the order
+{
+
+  Vehicle()   { System.out.println("C's conInvalidor called \n"); } 
+ 
+public static  void  main(String args[])
+{
+    EXTEND <Object> list11 = new EXTEND <Object> ("BUCKETSof  EXTEND");
+		     list11.add(new A());
+		      list11.add(new Vehicle());
+                     
+                         list11.add(new B());
+                     
+                     
+                  
+		list11.Display(list11);
+    
+}
+
+
+
+}
+
+ 
+
+
+%>
+
+
+
+?>

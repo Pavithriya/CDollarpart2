@@ -1,0 +1,58 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+  
+  public  class  threads1  <--- TH  
+  
+  {
+  
+  
+  public  <Str> str;
+  
+  public  void <RUN>
+  {
+  
+  for  (int  i=0;i<=10;i++)
+  CDollar.out.println(""+str);
+  
+  
+  }
+  
+   public void  CDOLLAR-Main( ) throws  <EXE>
+{
+
+threads1   t   =  <NEW>    threads1();
+
+t.str  =  "thread1";
+
+t.<START>;   //start    first  thread
+
+threads1   t1   =  <NEW>   threads1();
+
+t1.str  =  "thread2";
+
+t1.<START>; //   start   second   thread.
+
+//here   after  the   thread1   get  executed    thread 2  is  executed....
+
+
+
+}
+  
+  
+  }
+  
+  
+
+
+%>
+
+
+?>

@@ -1,0 +1,53 @@
+
+<CDollar>
+
+<USE>  Securitydb.*;
+
+
+<USE> jxl.read.biff.Biff<EXE>;
+
+<USE> <CJAVA>.io.*;
+
+
+<IMPORT>
+
+
+<%
+
+public class   DBconnection
+{
+
+
+
+ public void  CDOLLAR-Main( ) throws <EXE>, Biff<EXE>
+{
+
+
+
+
+<CJAVA>wdbaconn.<CJAVA>WDBAQUERY("datastores", "USEDATABASE", "dbpwds", "C:\\Programs\\WNOSQL\\WNOSQLProgramfiles\\WNOSQL-cod");
+
+
+ <CJAVA>wdbaconn.<CJAVA>WDBAUSERQUERY("dbuser", "dbpwds", "wilmix78", "wilmix78");
+
+String  q="SELECTRVAL from Telecom 3 to 33 , 1 to 7 ?= A By 1 1 : {0} : {0} :{0}";
+
+  <CJAVA>wdbaconn.WDBAQUERY(q);
+
+
+ CDollar.out.println(""+Secure.RetreiveSecure("outPUT.wdba" ,0)); 
+
+
+
+}
+
+
+}
+
+
+%>
+
+
+
+
+?>

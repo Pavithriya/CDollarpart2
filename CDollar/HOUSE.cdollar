@@ -1,0 +1,179 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+   class  HOUSE  <--- Graphics
+
+{
+
+ public void  CDOLLAR-Main( )
+{
+
+houseparts a  = <NEW> houseparts();
+
+ a.<SIZE>(500,700);
+     
+     a.<FLOWLAYOUT>
+ a.<VISIBLE=TRUE>
+
+}
+
+
+
+Shared class houseparts  <--- HOUSE
+{
+ <PAINT> 
+    { 
+        background(g); 
+        house (g); 
+        roof1 (g); 
+        roof2 (g); 
+        windows (g); 
+        framing (g); 
+        extras (g); 
+        text (g); 
+    } 
+      
+    public void background(<DRAW> g) 
+    { 
+       // <SET>Background (COLOR=white); 
+        
+        <SETCOLOUR>(COLOR=black);
+         
+  
+  
+        <FILLOVAL> (15,35,170,55); 
+        <FILLOVAL> (20,20,160,50); 
+        <FILLOVAL> (350,50,170,55); 
+        <FILLOVAL> (355,35,160,50);
+        
+  
+        
+       
+        <SETCOLOUR>(COLOR=cyan);  
+        <FILLOVAL> (650,035,120,120); 
+        <SETCOLOUR>(COLOR=green);  
+       <ARC>(10,20,180,190,160,60);
+  <FILLARC>(230,15,150,200,150,75);
+    } 
+      
+    public void house (<DRAW> g) 
+    { 
+        <SETCOLOUR>(COLOR=yellow);    
+        <FILLRECT> (100,250,400,200); 
+        <FILLRECT> (499,320,200,130); 
+        <SETCOLOUR>(COLOR=green);      
+        <FILLRECT> (160,150,60,90); 
+        <FILLRECT> (245,380,110,70); 
+        <FILLRECT> (508,350,180,100); 
+        <SETCOLOUR>(COLOR=yellow);  
+       <FILLOVAL> (282,412,10,10); 
+        <FILLOVAL> (307,412,10,10); 
+          
+    } 
+      
+    public void roof1 (<DRAW> g) 
+    { 
+        <SETCOLOUR>(COLOR=pink);  
+        int x[] = {98,300,501}; 
+        int y[] = {250,130,250}; 
+        <FILLPOLYGON>(x,y,3); 
+    } 
+      
+    public void roof2 (<DRAW> g) 
+    { 
+        <SETCOLOUR>(COLOR=orange); 
+        int x[] = {499,499,700}; 
+        int y[] = {320,249,320}; 
+        <FILLPOLYGON>(x,y,3); 
+    } 
+      
+      
+    public void windows (<DRAW> g) 
+    { 
+        <SETCOLOUR>(COLOR=white);  
+       <FILLOVAL>(521,350,68,31); 
+        <FILLOVAL> (606,350,68,31); 
+        <FILLRECT> (121,261,78,78); 
+        <FILLRECT> (121,361,78,78); 
+        <FILLRECT> (401,261,78,78); 
+        <FILLRECT> (401,361,78,78); 
+        <FILLRECT> (241,261,118,78);    
+       <SETCOLOUR>(COLOR=white);
+        <FILLRECT> (125,265,70,70); 
+        <FILLRECT> (125,365,70,70); 
+        <FILLRECT>(405,265,70,70); 
+        <FILLRECT> (405,365,70,70); 
+        <FILLRECT> (245,265,110,70); 
+        <FILLOVAL> (525,353,60,25); 
+        <FILLOVAL> (610,353,60,25); 
+    } 
+      
+    public void framing (<DRAW> g) 
+    { 
+         <SETCOLOUR>(COLOR=black);  
+          
+        <FILLRECT> (298,380,2,70); 
+        <FILLRECT> (508,382,180,2); 
+        <FILLRECT> (508,417,180,2); 
+        <SETCOLOUR>(COLOR=white);  
+        <FILLRECT> (157,265,5,70); 
+        <FILLRECT> (157,365,5,70); 
+        <FILLRECT> (437,265,5,70); 
+        <FILLRECT> (438,365,5,70); 
+        <FILLRECT> (297,265,5,70); 
+        <FILLRECT> (125,298,70,5); 
+        <FILLRECT> (125,398,70,5); 
+        <FILLRECT> (405,298,70,5); 
+        <FILLRECT> (405,398,70,5); 
+        <FILLRECT> (245,298,110,5); 
+        <FILLRECT> (245,375,110,5);  
+        <FILLRECT> (240,375,5,75); 
+        <FILLRECT> (352,375,5,75); 
+        <FILLRECT> (508,345,180,5); 
+        <FILLRECT> (503,345,5,105); 
+        <FILLRECT> (688,345,5,105); 
+    } 
+      
+    public void extras (<DRAW> g) 
+    { 
+        <SETCOLOUR>(COLOR=orange);  
+        <FILLOVAL> (160,105,35,45); 
+        <FILLOVAL> (170,95,35,45); 
+        <FILLOVAL> (160,85,35,45); 
+        <FILLOVAL> (170,35,35,45); 
+        <FILLOVAL> (160,25,35,45); 
+        <FILLOVAL> (170,15,35,45); 
+        <SETCOLOUR>(COLOR=orange);  
+        <FILLRECT> (508,450,180,150); 
+        <FILLRECT> (245,450,107,50); 
+        <FILLRECT> (274,500,50,40); 
+        <FILLRECT> (274,520,250,45); 
+        } 
+          
+    public void text (<DRAW> g) 
+    {    
+        <SETCOLOUR>(COLOR=orange);              
+                <DRAWTEXT>("House portrait by: wilmix jemin",390,70); 
+    } 
+
+    }
+    
+    
+    
+
+}
+
+
+%>
+
+
+?>
+
+

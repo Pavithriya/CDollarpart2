@@ -1,0 +1,31 @@
+
+<CDollar>
+
+
+ <USE> CDollar.IO.*; 
+
+<%
+
+
+public   class   Name
+
+
+{
+
+
+  public void  CDOLLAR-Main( )
+
+{
+Print.Println("Hiram","is going\n");
+
+//Print.printf("Hiram  Age  is =","45 \n");
+Print.Println("Hiram    is working ","in  Abc Bank\n");
+}
+
+
+}
+
+
+%>
+
+?>

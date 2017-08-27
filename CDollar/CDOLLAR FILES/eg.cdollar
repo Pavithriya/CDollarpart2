@@ -1,0 +1,77 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+   class  eg
+
+{
+
+Shared int  sno; Shared int  m1,m2,m3;
+
+Shared double  avg=0.0;
+
+eg(int sno,int m1,int m2,int m3,double avg)
+{
+<IS>.sno=sno;
+<IS>.m1=m1;
+<IS>.m2=m2;
+<IS>.m3=m3;
+<IS>.avg=avg;
+
+}
+
+  public void  CDOLLAR-Main( )
+	{
+	sno=1;
+
+m1=234;
+m2=456;
+m3=656;	
+	avg=((m1+m2+m3)/3);	
+eg   s  =  <NEW>  eg(sno,m1,m2,m3,avg);
+
+m1=2344;
+m2=4564;
+m3=6564;	
+eg   s2  =  <NEW>  eg(sno,m1,m2,m3,avg);
+
+		
+		<STRUCTURE> <<OBJECT>> list = <NEW> <STRUCTURE> <<OBJECT>>(s);
+		list.add(s2);
+		//list.add(student.m1);
+		//list.add(student.m2);
+		//list.add("3 cow");
+		//list.add("4 goat");
+		//list.add("5 chicken");
+		//list.add("6 ostrich");
+
+		
+		for (int i = 0; i NOT= list.size(); i = i + 1)
+		{
+		
+		<OBJECT>  el=list.ret(i);
+		
+		eg  s1= (eg)el;
+			CDollar.out.println("SNO= "+s1.sno);
+			CDollar.out.println("m1="+s1.m1);
+			CDollar.out.println("m2="+s1.m2);
+			CDollar.out.println("m3="+s1.m3);
+			CDollar.out.println("AVG="+s1.avg);
+			CDollar.out.println("size="+list.size());
+		}
+	}
+}
+
+
+%>
+
+
+?>
+
+

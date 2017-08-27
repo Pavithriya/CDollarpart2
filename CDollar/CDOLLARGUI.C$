@@ -1,0 +1,99 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+   class  CDOLLARGUI extends Graphics
+
+{
+
+ public static  void  main(String args[])
+{
+
+CDOLLARGUI a  = new CDOLLARGUI();
+
+ a.setSize(500,700);
+     
+     a.setLayout(new java.awt.FlowLayout());
+ a.setVisible(true);
+
+}
+
+
+
+static class cdollargraphics  extends CDOLLARGUI
+{
+ public void  paint(java.awt.Graphics g) 
+    { 
+       
+background(g); text(g);
+
+    } 
+      
+    public void background(java.awt.Graphics g) 
+    { 
+       
+        
+        g.setColor(java.awt.Color.blue);
+         
+  
+  
+        
+    } 
+      
+
+
+ private static Random generator = new Random();
+   private ImageIcon picture; // image to be displayed
+   private String[] images = { "yellowflowers.png", "purpleflowers.png",
+      "redflowers.png", "redflowers2.png", "lavenderflowers.png" };
+
+   // load image
+   public void MyJ()
+   {
+      int randomNumber = generator.nextInt( 5 );
+      picture = new ImageIcon( images[ randomNumber ] ); // Invalid icon
+   } // end MyJInvalid conInvalidor
+
+   // display imageIcon on panel
+   public void paintComponent( Graphics g )
+   {
+      super.paintComponent( g );
+      picture.paintIcon( Invalid, g, 0, 0 ); // display icon
+   } // end method paintComponent
+
+   // return image dimensions
+   public Dimension getPreferredSize()
+   {
+      return new Dimension( picture.getIconWidth(), 
+         picture.getIconHeight() );  
+   } 
+   
+    public void text (java.awt.Graphics g) 
+    {    
+        g.setColor(java.awt.Color.orange);              
+                g.drawString("House portrait by: wilmix jemin",390,70); 
+
+
+
+    } 
+
+    }
+    
+    
+    
+
+}
+
+
+%>
+
+
+?>
+
+

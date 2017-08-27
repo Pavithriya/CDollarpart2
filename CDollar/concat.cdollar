@@ -1,0 +1,125 @@
+
+<CDollar>
+
+<IMPORT>
+
+<%
+
+
+
+
+
+friends  toy
+{
+
+public void  display();
+
+
+}
+
+
+  class  concat1  -->  toy
+{
+public  void  display()
+
+{
+
+CDollar.out.println("CDollar  is  going  to  be   finished");
+
+
+}
+
+}
+public class concat 
+
+{
+
+
+Shared int counter=4;
+	
+	public void  CDOLLAR-Main( ) throws <EXE>
+	{
+int i;
+
+
+String i1="weew";
+Print.Println("wilmix",i1);
+Print.Println("  \njemin","is going");
+
+<S> <Integer> ar2  =  <NEW>  <TS> <Integer> (); 
+
+ar2.add(100);
+
+
+
+<WR>  it   =   ar2.record();
+
+while  (it.<HAS>)
+{
+
+<OBJECT>  el= it.next();
+Print.Println("/n",el.StringConvert());
+
+}
+
+<SBD> sb = <NEW> <SBD>("weldone  wilmix");
+
+
+
+int  a;
+
+a=105;
+if (( a >100) AND  (a<=106))
+	CDollar.out.println("/n"+a);
+	
+	
+	if   (a NOT= 0)
+	CDollar.out.println("/n"+a);
+	
+	a+=2+counter;
+	if  (a  # 107)
+	CDollar.out.println("/n"+a);
+	
+	
+	TH  t  =  <NEW>  TH();
+	
+	
+	int a11[] <Array> int[100];
+	
+	a11[0]=1000;
+	CDollar.out.println("/n"+a11[0]);
+	
+	<VList>  v  =  <NEW>  <VList>();
+	
+	v.addE(100);
+	
+	CDollar.out.println("/n"+v.get(0));
+	
+	v.removeAt(0);
+	
+	v.addE(1001);
+	v.addE(1002);
+	CDollar.out.println("/n"+v.first());
+	
+	
+	
+
+      <RANDOMACCESSFILE>  rf  =  <NEW>   <RANDOMACCESSFILE>("concat.c$","rw");
+    rf.write("Hello World".getBytes());
+
+rf.close();
+
+	
+rf.close();
+
+	
+concat1  obj  =  <NEW>  concat1();
+obj.display();
+	}
+}
+
+
+%>
+
+
+ ?>

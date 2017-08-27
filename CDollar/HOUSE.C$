@@ -1,0 +1,179 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+   class  HOUSE  extends Graphics
+
+{
+
+ public static  void  main(String args[])
+{
+
+houseparts a  = new houseparts();
+
+ a.setSize(500,700);
+     
+     a.setLayout(new java.awt.FlowLayout());
+ a.setVisible(true);
+
+}
+
+
+
+static class houseparts  extends HOUSE
+{
+ public void  paint(java.awt.Graphics g) 
+    { 
+        background(g); 
+        house (g); 
+        roof1 (g); 
+        roof2 (g); 
+        windows (g); 
+        framing (g); 
+        extras (g); 
+        text (g); 
+    } 
+      
+    public void background(java.awt.Graphics g) 
+    { 
+       // Invalid (java.awt.Color.white); 
+        
+        g.setColor(java.awt.Color.black);
+         
+  
+  
+        g.fillOval (15,35,170,55); 
+        g.fillOval (20,20,160,50); 
+        g.fillOval (350,50,170,55); 
+        g.fillOval (355,35,160,50);
+        
+  
+        
+       
+        g.setColor(java.awt.Color.cyan);  
+        g.fillOval (650,035,120,120); 
+        g.setColor(java.awt.Color.green);  
+       g.drawArc(10,20,180,190,160,60);
+  g.fillArc(230,15,150,200,150,75);
+    } 
+      
+    public void house (java.awt.Graphics g) 
+    { 
+        g.setColor(java.awt.Color.yellow);    
+        g.fillRect (100,250,400,200); 
+        g.fillRect (499,320,200,130); 
+        g.setColor(java.awt.Color.green);      
+        g.fillRect (160,150,60,90); 
+        g.fillRect (245,380,110,70); 
+        g.fillRect (508,350,180,100); 
+        g.setColor(java.awt.Color.yellow);  
+       g.fillOval (282,412,10,10); 
+        g.fillOval (307,412,10,10); 
+          
+    } 
+      
+    public void roof1 (java.awt.Graphics g) 
+    { 
+        g.setColor(java.awt.Color.pink);  
+        int x[] = {98,300,501}; 
+        int y[] = {250,130,250}; 
+        g.fillPolygon(x,y,3); 
+    } 
+      
+    public void roof2 (java.awt.Graphics g) 
+    { 
+        g.setColor(java.awt.Color.orange); 
+        int x[] = {499,499,700}; 
+        int y[] = {320,249,320}; 
+        g.fillPolygon(x,y,3); 
+    } 
+      
+      
+    public void windows (java.awt.Graphics g) 
+    { 
+        g.setColor(java.awt.Color.white);  
+       g.fillOval(521,350,68,31); 
+        g.fillOval (606,350,68,31); 
+        g.fillRect (121,261,78,78); 
+        g.fillRect (121,361,78,78); 
+        g.fillRect (401,261,78,78); 
+        g.fillRect (401,361,78,78); 
+        g.fillRect (241,261,118,78);    
+       g.setColor(java.awt.Color.white);
+        g.fillRect (125,265,70,70); 
+        g.fillRect (125,365,70,70); 
+        g.fillRect(405,265,70,70); 
+        g.fillRect (405,365,70,70); 
+        g.fillRect (245,265,110,70); 
+        g.fillOval (525,353,60,25); 
+        g.fillOval (610,353,60,25); 
+    } 
+      
+    public void framing (java.awt.Graphics g) 
+    { 
+         g.setColor(java.awt.Color.black);  
+          
+        g.fillRect (298,380,2,70); 
+        g.fillRect (508,382,180,2); 
+        g.fillRect (508,417,180,2); 
+        g.setColor(java.awt.Color.white);  
+        g.fillRect (157,265,5,70); 
+        g.fillRect (157,365,5,70); 
+        g.fillRect (437,265,5,70); 
+        g.fillRect (438,365,5,70); 
+        g.fillRect (297,265,5,70); 
+        g.fillRect (125,298,70,5); 
+        g.fillRect (125,398,70,5); 
+        g.fillRect (405,298,70,5); 
+        g.fillRect (405,398,70,5); 
+        g.fillRect (245,298,110,5); 
+        g.fillRect (245,375,110,5);  
+        g.fillRect (240,375,5,75); 
+        g.fillRect (352,375,5,75); 
+        g.fillRect (508,345,180,5); 
+        g.fillRect (503,345,5,105); 
+        g.fillRect (688,345,5,105); 
+    } 
+      
+    public void extras (java.awt.Graphics g) 
+    { 
+        g.setColor(java.awt.Color.orange);  
+        g.fillOval (160,105,35,45); 
+        g.fillOval (170,95,35,45); 
+        g.fillOval (160,85,35,45); 
+        g.fillOval (170,35,35,45); 
+        g.fillOval (160,25,35,45); 
+        g.fillOval (170,15,35,45); 
+        g.setColor(java.awt.Color.orange);  
+        g.fillRect (508,450,180,150); 
+        g.fillRect (245,450,107,50); 
+        g.fillRect (274,500,50,40); 
+        g.fillRect (274,520,250,45); 
+        } 
+          
+    public void text (java.awt.Graphics g) 
+    {    
+        g.setColor(java.awt.Color.orange);              
+                g.drawString("House portrait by: wilmix jemin",390,70); 
+    } 
+
+    }
+    
+    
+    
+
+}
+
+
+%>
+
+
+?>
+
+

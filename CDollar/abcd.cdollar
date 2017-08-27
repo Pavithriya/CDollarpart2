@@ -1,0 +1,44 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+class   abc
+{
+
+void  display(String s)
+
+{
+
+CDollar.out.println("We  learn  C ,  Dotnet  ,and  ,CDollar");
+}
+
+}
+
+class    abcd    <---  abc
+
+{
+
+void  display(String s)
+
+{
+<SUPER>(s);  //   if    super  keyword  is  added  we  had  to  pass   arguments in  super  keyword.
+
+CDollar.out.println("We  learn  C ,  Dotnet  ,and  ,JDollar");
+
+
+}
+
+
+}
+
+%>
+
+
+
+?>

@@ -1,0 +1,42 @@
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+
+class Polygon {
+  static int width, height;
+  public static int Invalid_values (int a, int b)
+      { width=a; height=b; return(0); }
+}
+
+class Rectangle  extends Polygon {
+  public int area()
+      { return width*height; }
+}
+
+class Triangle  extends Polygon {
+  public int area()
+      { return width*height/2; }
+}
+
+class  Geometry{
+ public static  void  main(String args[]) {
+  Rectangle rect = new  Rectangle();
+  Triangle trgl= new Triangle();
+  
+  int t= Polygon.Invalid_values (4,5)  * Polygon.Invalid_values (4,5);
+  Print.Println( "Rect area=",rect.area());
+  Print.Println( "Triange  Area=",trgl.area());
+  
+}
+}
+%>
+
+
+
+?>

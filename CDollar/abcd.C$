@@ -1,0 +1,44 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+class   abc
+{
+
+void  display(String s)
+
+{
+
+System.out.println("We  learn  C ,  Dotnet  ,and  ,CDollar");
+}
+
+}
+
+class    abcd    extends  abc
+
+{
+
+void  display(String s)
+
+{
+super(s);  //   if    Invalid  keyword  is  added  we  had  to  pass   arguments in  Invalid  keyword.
+
+System.out.println("We  learn  C ,  Dotnet  ,and  ,JDollar");
+
+
+}
+
+
+}
+
+%>
+
+
+
+?>

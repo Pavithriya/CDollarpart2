@@ -1,0 +1,56 @@
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+
+ 
+
+ class A
+{
+
+  A()  { CDollar.out.println("A's conInvalidor called \n"); }
+};
+ 
+class B 
+{
+
+  B()  {CDollar.out.println("B's conInvalidor called \n"); }
+};
+ 
+class Vehicle  <--- A
+// Note the order
+{
+
+  Vehicle()   { CDollar.out.println("C's conInvalidor called \n"); } 
+ 
+public void  CDOLLAR-Main( )
+{
+    EXTEND <<OBJECT>> list11 = <NEW> EXTEND <<OBJECT>> ("BUCKETSof  EXTEND");
+		     list11.add(<NEW> A());
+		      list11.add(<NEW> Vehicle());
+                     
+                         list11.add(<NEW> B());
+                     
+                     
+                  
+		list11.Display(list11);
+    
+}
+
+
+
+}
+
+ 
+
+
+%>
+
+
+
+?>

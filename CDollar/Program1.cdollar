@@ -1,0 +1,59 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+<%
+
+
+
+class  Program1 
+
+{
+
+ 
+ public void  CDOLLAR-Main( )
+{
+
+int i;
+Print.Println("\nList  of   Technologies  in  year ","2016 ");	
+	    LL1 list = <NEW> LL1();
+
+
+String i1="weew";
+Print.Println("wilmix",i1);
+
+Print.Println("Hiram is going","today");
+Print.printf("Hiram  Age  is =","45 ");
+
+Print.Println("Hiram    is working ","in  Abc Bank\n");
+Print.Println("  \njemin","is going");
+
+<TS>   ar2 =  <NEW>  <TS>();
+
+ar2.add("100");
+ar2.add("22");
+
+
+Print.printf("jeminjhjhjh",ar2.StringConvert());
+
+Print.Println("no:  2/782 ,ds street,california-2322",ar2.StringConvert());
+
+		
+		
+		
+
+}
+
+
+}
+
+
+%>
+
+
+?>
+

@@ -1,0 +1,91 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+
+
+class Main
+{
+	public  Main()
+	{
+		<SUPER>();
+	}
+
+	public void main1()
+	{
+	
+	String  s="dsdds";
+		
+		{*}<<Str>> l Pointer<<Str>>(s);  
+		
+l.add(s);
+		
+		for (int i = 0; i NOT= l.size(); i = i + 1)
+		{
+		
+		<OBJECT> obj=l.get(i);
+			CDollar.out.println(obj);
+			
+			
+			
+		}
+		
+		
+		
+		
+		<STRUCTURE> <<OBJECT>> list = <NEW> <STRUCTURE> <<OBJECT>>(l.get(0).StringConvert());
+		
+		for (int i11 = 0; i11 NOT= list.size(); i11 = i11 + 1)
+		{
+		
+		
+		
+		<OBJECT>  el=list.ret(i11);
+		
+
+		
+			CDollar.out.println("SNO= "+el.StringConvert());
+
+                }
+		
+	}
+}
+
+
+   class  abc
+
+{
+
+ 
+
+public void  CDOLLAR-Main( )
+{
+
+
+
+
+
+Main  m  = <NEW> Main();
+
+m.main1();
+
+
+
+
+}
+
+}
+
+
+%>
+
+
+?>
+
+

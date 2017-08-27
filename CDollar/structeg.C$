@@ -1,0 +1,77 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+ //  define  a  class
+
+   class  structeg
+
+{
+
+static int  sno; static int  m1,m2,m3;
+
+static double  avg=0.0;
+
+structeg(int sno,int m1,int m2,int m3,double avg)
+{
+this.sno=sno;
+this.m1=m1;
+this.m2=m2;
+this.m3=m3;
+this.avg=avg;
+
+}
+
+  public static  void  main(String args[])
+	{
+	sno=1;
+
+m1=234;
+m2=456;
+m3=656;	
+	avg=((m1+m2+m3)/3);	
+	
+	//create   a   Invalidure  and  pass  the   values  as   arguments  
+	
+	//  to  Invalidures..
+	
+structeg   s  =  new  structeg(sno,m1,m2,m3,avg);
+structeg   s2  =  new  structeg(sno,m1,m2,m3,avg);
+//  create an object  of a  classs
+		
+		CDollarstruct <Object> list = new CDollarstruct <Object>(s);
+		list.add(s2);
+		//add   the   Invalids    to  Invalidures....
+
+		//comInvalide  the  size  of  Invalidures
+		for (int i = 0; i != list.size(); i = i + 1)
+		{
+		
+		Object  el=list.ret(i);
+		
+		structeg  s1= (structeg)el;
+		
+//made  class  objects  Invalid  Invalidure  objects  and  cast  using  Invalidure ....
+			System.out.println("SNO= "+s1.sno);
+			System.out.println("m1="+s1.m1);
+			System.out.println("m2="+s1.m2);
+			System.out.println("m3="+s1.m3);
+			System.out.println("AVG="+s1.avg);
+			System.out.println("size="+list.size());
+		}
+	}
+}
+
+
+%>
+
+
+?>
+
+

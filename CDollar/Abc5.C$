@@ -1,0 +1,49 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+
+abstract  class  Abc51
+
+{
+
+  abstract void display();
+
+
+
+
+
+
+
+}
+
+public  class  Abc5  extends Abc51 
+
+{
+
+ static void display()
+{
+Print.Println("Wilmix","jemin");
+}
+ public static  void  main(String args[])
+
+{
+
+display();
+
+
+}
+
+}
+
+%>
+
+
+
+?>

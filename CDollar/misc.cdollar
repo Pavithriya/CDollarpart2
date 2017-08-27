@@ -1,0 +1,186 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+  abstract class  misc <--- TH 
+
+{
+
+<VOLATILE> int v1;
+Shared <TRANS> int v;
+
+
+
+~
+{
+
+CDollar.out.println("object  is    deleted");
+
+}
+public  int  getnum1()
+
+{
+
+
+
+return(v1);
+}
+
+Shared int s3;
+public Shared void  operator *(int s1 ,int s2)
+{
+
+s3=s1 * s2;
+
+CDollar.out.println(""+s3);
+}
+
+ public void  CDOLLAR-Main( ) throws  <EXE>
+{
+
+int  a[]  <Array> int[1000];
+
+
+ operator *(10,10);
+ 
+ operator *(200,10000);
+
+
+
+<AList>  ar  = <NEW>  <AList>();
+
+
+
+for(int  i=999;i>=0;i--)
+{
+
+a[i]=i;
+
+ar.add(i);
+}
+
+<A>.<SORT>(a);
+
+
+for(int  i=0;i<=999;i++)
+CDollar.out.println("  "+i);
+
+CDollar.out.println("  "+<A>.<BinarySearch>(a,-5));
+
+
+
+<WR>  it  =  ar.record();
+
+
+while(it.<HAS>)
+
+{
+<OBJECT>  el   =  it.<NEXT>;
+
+CDollar.out.println(" data= "+el);
+
+
+}
+<LR>  it1  =  ar.<LISTLR>;
+while(it1.<HASP>)
+
+{
+<OBJECT>  el1   =  it1.<PREVIOUS>;
+
+CDollar.out.println(" data1= "+el1);
+}
+
+
+
+<------
+while  (es.<HASEMORE>)
+
+{
+
+<OBJECT>  el11   =  es.<NEXTEL>;
+
+CDollar.out.println(" data1= "+el1);
+}
+------>
+
+
+<DATE>  d2  =   <NEW>  <DATE>();
+
+
+CDollar.out.println("month="+<Month>);
+CDollar.out.println("Year="+<Y>);
+CDollar.out.println("Hour="+<H>);
+CDollar.out.println("Sec="+<SEC>);
+
+//<VOLATILE> int v1;
+
+//<TRANS> int v;
+
+v=20;
+
+<FOUTPUTSTREAM> os1  =  <NEW>  <FOUTPUTSTREAM>("out1.txt");
+<OOUTPUTSTREAM> d  =  <NEW> <OOUTPUTSTREAM>(os1);
+
+d.<WRITEOBJ>(v);
+d.<WRITEOBJ>(ar);
+
+<FINPUTSTREAM> osd  =  <NEW>  <FINPUTSTREAM>("out1.txt");
+<OINPUTSTREAM>  br  =  <NEW>  <OINPUTSTREAM>(osd);
+
+<OBJECT>  ar7  =  br.<OBJECTREAD>;
+
+CDollar.out.println(""+ar7);
+
+
+<STACK> s=  <NEW>  <STACK>();
+
+s.<PUSH>(100);
+s.<PUSH>(2000);
+s.<POP>;
+
+CDollar.out.println(""+s);
+
+
+<PRIORITYQUEUE>  q =  <NEW>  <PRIORITYQUEUE>();
+
+q.add(1000);
+
+q.add(544);
+q.add(66);
+q.add(667888);
+CDollar.out.println(""+q);
+
+//Queue<<Str>> q11 = <NEW> Queue<<Str>>();
+  
+            
+           //  q11.enqueue("1000");
+           //  if (NOTq11.isEmpty()) CDollar.out.println(q11.dequeue() + " ");
+       
+        
+        
+      //  CDollar.out.println( q11.size());
+
+
+
+
+}
+
+
+
+
+
+}
+
+
+%>
+
+
+?>
+
+

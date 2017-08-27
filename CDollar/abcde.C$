@@ -1,0 +1,80 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+   class  abcde extends Graphics 
+
+{
+
+
+
+
+
+
+ public static  void  main(String args[])
+{
+abr  a  = new abr();
+
+
+
+
+
+ a.setSize(500,700);
+     
+     a.setLayout(new java.awt.FlowLayout());
+ a.setVisible(true);
+    
+
+}
+
+
+static  class abr  extends abcde
+{
+public void  paint(java.awt.Graphics g)
+
+{
+//Color  c  =  new Color();
+
+for(int  i=0; i<=600;i++)
+{
+
+g.drawString("CHOOSEN  CHOICE  is",400,500);
+g.setColor(java.awt.Color.red);
+g.drawOval(10+i,10+i,50+i,50+i);
+g.fillOval(70+i,90+i,140+i,100+i);
+g.setColor(java.awt.Color.blue);
+g.drawOval(190+i,10+i,90+i,30+i);
+g.drawRect(100+i,10+i,60+i,50+i);
+g.setColor(java.awt.Color.cyan);
+g.fillRect(100+i,10+i,60+i,50+i);
+g.drawRoundRect(190+i,10+i,60+i,50+i,15+i,15+i);
+g.setColor(java.awt.Color.green);
+g.drawArc(10+i,20+i,150+i,190+i,160+i,60+i);
+g.fillArc(230+i,15+i,150+i,200+i,150+i,75+i);
+
+if ( i== 300)  i=i-1;
+}
+
+
+}
+
+
+
+
+
+
+
+}
+}
+%>
+
+
+?>
+
+

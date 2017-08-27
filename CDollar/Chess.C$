@@ -1,0 +1,78 @@
+
+<CDollar>
+
+import java.awt.*;
+
+
+
+
+<%
+  
+
+public class Chess extends   Graphics{
+
+
+
+
+   public static  void  main(String args[])
+
+
+{
+         
+
+abr  a = new abr();
+
+a.setSize(1000,900);
+ 
+  a.setLayout(new java.awt.FlowLayout());
+ 
+
+
+  a.setVisible(true);
+ 
+
+
+ 
+
+
+
+
+    }  
+
+
+
+
+static  class abr  extends Chess
+
+{
+    
+   public void  paint(java.awt.Graphics g)
+
+{
+        
+        g.fillRect(100, 100, 400, 400);
+        for(int i = 100; i <= 400; i+=100){
+            for(int j = 100; j <= 400; j+=100){
+                g.clearRect(i, j, 50, 50);
+            }
+        }
+        
+        for(int i = 150; i <= 450; i+=100){
+            for(int j = 150; j <= 450; j+=100){
+                g.clearRect(i, j, 50, 50);
+            }
+        }
+    }
+
+}
+
+
+
+
+}
+%>
+
+
+?>
+
+

@@ -1,0 +1,164 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+<%
+
+
+
+
+
+ class LL1
+{
+	
+	private LL1 nextNode = null;
+
+	private String datum = null;
+	
+	public  LL1()
+	{
+	}
+public void  main()
+	{
+	
+	
+	LL1 list = new LL1("0 C");
+		list.add("1 CDOLLAR");
+		list.add("2 GDOLLAR");
+		list.add("3 CHDOLLAR");
+		list.add("4 JDOLLAR");
+		list.add("5 JSTAR");
+		list.add("6 JSAUCER");
+
+		
+		for (int i = 0; i != list.size(); i = i + 1)
+		{
+			Print.Println("",list.get(i).toString());
+		}
+		
+	}
+
+	public LL1(String datum)
+	{
+		super();
+		this.datum = datum;
+	}
+
+	public void add(String datum)
+	{
+		if (nextNode != null)
+		{
+			nextNode.add(datum);
+			return;
+		}
+
+		nextNode = new LL1(datum);
+	}
+
+	public String get(int i)
+	{
+		if (i == 0)
+			return datum;
+
+		return nextNode.get(i - 1);
+	}
+
+	public int size()
+	{
+		if (nextNode == null)
+			return 1;
+
+		return nextNode.size() + 1;
+	}
+}
+
+  class  abc 
+
+{
+
+ 
+ public static  void  main(String args[])
+{
+
+int i;
+Print.Println("\nList  of   Technologies  in  year ","2016 ");	
+	      LL1 list = new LL1();
+
+
+String i1="weew";
+Print.Println("wilmix",i1);
+Print.Println("  \njemin","is going");
+
+TreeSet   ar2 =  new  TreeSet();
+
+ar2.add("100");
+ar2.add("22");
+//Main  m  =new  Main();
+list.main();
+
+Print.Println("jeminjhjhjh",ar2.toString());
+
+
+	ArrayList  ar=  new  ArrayList();
+
+ar.add("1123");
+ar.add("211");
+ar.add("31");
+ar.add("4");
+ar.add("100");
+
+CDollarCollection.Sort( ar,"ASC");
+
+
+CDollarCollection.Sort( ar,"DESC");
+
+	ArrayList  ar1=  new  ArrayList();
+
+ar1.add("rahul");
+ar1.add("wilmix");
+ar1.add("dion");
+ar1.add("shiyam");
+ar1.add("priya");
+ar1.add("abraham");
+
+CDollarCollection.SortString( ar1,"ASC");
+
+
+CDollarCollection.SortString( ar1,"DESC");	
+		
+
+HashMap  mp  =  new  HashMap();
+mp  .put(1, 234);
+System.out.println(""+mp.get(1));
+
+String s="William";
+//Queue  q11 = new Queue ();
+  
+            
+           //  q11.enqueue("1000");
+            // if (!q11.isEmpty()) //check  whether  the   queue  is  empty  or  not?
+
+ //System.out.println(q11.<DEQUEUE> + " ");
+       
+        
+        
+      //  System.out.println( q11.size());
+
+		
+		
+}
+
+
+}
+
+
+%>
+
+
+?>
+
+

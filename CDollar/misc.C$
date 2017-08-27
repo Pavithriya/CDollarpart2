@@ -1,0 +1,186 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+  abstract class  misc extends Thread 
+
+{
+
+volatile int v1;
+static transient int v;
+
+
+
+protected void finalize()
+{
+
+System.out.println("object  is    deleted");
+
+}
+public  int  getnum1()
+
+{
+
+
+
+return(v1);
+}
+
+static int s3;
+public static void  MULMETHOD(int s1 ,int s2)
+{
+
+s3=s1 * s2;
+
+System.out.println(""+s3);
+}
+
+ public static  void  main(String args[]) throws  Exception
+{
+
+int  a[]  = new  int[1000];
+
+
+ MULMETHOD(10,10);
+ 
+ MULMETHOD(200,10000);
+
+
+
+ArrayList  ar  = new  ArrayList();
+
+
+
+for(int  i=999;i>=0;i--)
+{
+
+a[i]=i;
+
+ar.add(i);
+}
+
+Arrays.sort(a);
+
+
+for(int  i=0;i<=999;i++)
+System.out.println("  "+i);
+
+System.out.println("  "+Arrays.binarySearch(a,-5));
+
+
+
+Iterator  it  =  ar.iterator();
+
+
+while(it.hasNext())
+
+{
+Object  el   =  it.next();
+
+System.out.println(" data= "+el);
+
+
+}
+ListIterator  it1  =  ar.listIterator();
+while(it1.hasPrevious())
+
+{
+Object  el1   =  it1.previous();
+
+System.out.println(" data1= "+el1);
+}
+
+
+
+/*
+while  (es.hasMoreElements())
+
+{
+
+Object  el11   =  es.nextElement();
+
+System.out.println(" data1= "+el1);
+}
+-*/
+
+
+Date  d2  =   new  Date();
+
+
+System.out.println("month="+Calendar.MONTH);
+System.out.println("Year="+Calendar.YEAR);
+System.out.println("Hour="+Calendar.HOUR);
+System.out.println("Sec="+Calendar.SECOND);
+
+//volatile int v1;
+
+//transient int v;
+
+v=20;
+
+java.io.FileOutputStream os1  =  new  java.io.FileOutputStream("out1.txt");
+java.io.ObjectOutputStream d  =  new java.io.ObjectOutputStream(os1);
+
+d.writeObject(v);
+d.writeObject(ar);
+
+java.io.FileInputStream osd  =  new  java.io.FileInputStream("out1.txt");
+java.io.ObjectInputStream  br  =  new  java.io.ObjectInputStream(osd);
+
+Object  ar7  =  br.readObject();
+
+System.out.println(""+ar7);
+
+
+Stack s=  new  Stack();
+
+s.push(100);
+s.push(2000);
+s.pop();
+
+System.out.println(""+s);
+
+
+PriorityQueue  q =  new  PriorityQueue();
+
+q.add(1000);
+
+q.add(544);
+q.add(66);
+q.add(667888);
+System.out.println(""+q);
+
+//Queue<String> q11 = new Queue<String>();
+  
+            
+           //  q11.enqueue("1000");
+           //  if (!q11.isEmpty()) System.out.println(q11.dequeue() + " ");
+       
+        
+        
+      //  System.out.println( q11.size());
+
+
+
+
+}
+
+
+
+
+
+}
+
+
+%>
+
+
+?>
+
+

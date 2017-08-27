@@ -1,0 +1,30 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+   class  CLIENTSERVER1
+
+{
+
+ public void  CDOLLAR-Main( )
+{
+
+
+<SERVER>("1099");
+}
+
+}
+
+
+%>
+
+
+?>
+
+

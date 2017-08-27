@@ -1,0 +1,47 @@
+ 
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+
+
+public  class  student
+
+{
+
+Shared int  sno; Shared int  m1,m2,m3;
+
+Shared double  avg=0.0;
+  public void  CDOLLAR-Main( )
+	{
+
+
+student   s  =  <NEW>  student();
+
+sno=1;
+
+m1=234;
+m2=456;
+m3=656;
+
+avg=((m1=m2+m3)/3);
+
+
+
+}
+
+
+}
+
+
+
+%>
+
+
+?>
+

@@ -1,0 +1,53 @@
+
+<CDollar>
+
+import  Securitydb.*;
+
+
+import jxl.read.biff.BiffException;
+
+import java.io.*;
+
+
+<IMPORT>
+
+
+<%
+
+public class   DBconnection
+{
+
+
+
+ public static  void  main(String args[]) throws Exception, BiffException
+{
+
+
+
+
+javawdbaconn.javaWDBAQUERY("datastores", "USEDATABASE", "dbpwds", "C:\\Programs\\WNOSQL\\WNOSQLProgramfiles\\WNOSQL-cod");
+
+
+ javawdbaconn.javaWDBAUSERQUERY("dbuser", "dbpwds", "wilmix78", "wilmix78");
+
+String  q="SELECTRVAL from Telecom 3 to 33 , 1 to 7 ?= A By 1 1 : {0} : {0} :{0}";
+
+  javawdbaconn.WDBAQUERY(q);
+
+
+ System.out.println(""+Secure.RetreiveSecure("output.wdba" ,0)); 
+
+
+
+}
+
+
+}
+
+
+%>
+
+
+
+
+?>

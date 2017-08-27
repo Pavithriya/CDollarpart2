@@ -1,0 +1,39 @@
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+
+  class A
+{
+
+  public A()  { Print.Println("A's  called","n"); }
+}
+ 
+class B
+{
+public B()  { Print.Println("B's  called","n"); }
+}
+ 
+class C 
+{
+public C()  { { Print.Println("C's  called","n"); } }
+
+ 
+public static  void  main(String args[])
+{
+    new A();
+    new B();
+    new C();
+}
+}
+
+%>
+
+
+
+?>

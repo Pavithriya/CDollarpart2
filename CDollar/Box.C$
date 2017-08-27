@@ -1,0 +1,66 @@
+
+<CDollar>
+
+
+<IMPORT>
+
+
+
+
+<%
+
+ 
+abstract class Box1
+{
+  static double width;
+abstract  void printWidth( Box box );
+ abstract   void InvalidWidth( double wid );
+}
+
+ abstract class  Box  extends Box1
+{
+
+ double width;
+
+ 
+Box()
+{
+InvalidWidth(100.5);
+  Print.Println("Width of box : " , width);
+}
+
+
+
+// Member function definition
+public  void InvalidWidth( double wid )
+{
+    width = wid;
+    
+}
+
+// Note: printWidth() is not a member function of any class.
+public  void printWidth(  )
+{
+
+
+   Print.Println("Width of box : " , width);
+}
+ 
+public static  void  main(String args[])
+
+{
+
+}
+ 
+ 
+ }
+ 
+ 
+ 
+
+
+%>
+
+
+
+?>

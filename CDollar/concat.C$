@@ -1,0 +1,124 @@
+Hello World
+
+<IMPORT>
+
+<%
+
+
+
+
+
+interface  toy
+{
+
+public void  display();
+
+
+}
+
+
+  class  concat1  implements  toy
+{
+public  void  display()
+
+{
+
+System.out.println("CDollar  is  going  to  be   finished");
+
+
+}
+
+}
+public class concat 
+
+{
+
+
+static int counter=4;
+	
+	public static  void  main(String args[]) throws Exception
+	{
+int i;
+
+
+String i1="weew";
+Print.Println("wilmix",i1);
+Print.Println("  \njemin","is going");
+
+Set <Integer> ar2  =  new  TreeSet <Integer> (); 
+
+ar2.add(100);
+
+
+
+Iterator  it   =   ar2.iterator();
+
+while  (it.hasNext())
+{
+
+Object  el= it.next();
+Print.Println("/n",el.toString());
+
+}
+
+StringBuilder sb = new StringBuilder("weldone  wilmix");
+
+
+
+int  a;
+
+a=105;
+if (( a >100) &&  (a<=106))
+	System.out.println("/n"+a);
+	
+	
+	if   (a != 0)
+	System.out.println("/n"+a);
+	
+	a+=2+counter;
+	if  (a  != 107)
+	System.out.println("/n"+a);
+	
+	
+	Thread  t  =  new  Thread();
+	
+	
+	int a11[] = new  int[100];
+	
+	a11[0]=1000;
+	System.out.println("/n"+a11[0]);
+	
+	Vector  v  =  new  Vector();
+	
+	v.addElement(100);
+	
+	System.out.println("/n"+v.get(0));
+	
+	v.removeElementAt(0);
+	
+	v.addElement(1001);
+	v.addElement(1002);
+	System.out.println("/n"+v.firstElement());
+	
+	
+	
+
+      java.io.RandomAccessFile  rf  =  new   java.io.RandomAccessFile("concat.c$","rw");
+    rf.write("Hello World".getBytes());
+
+rf.close();
+
+	
+rf.close();
+
+	
+concat1  obj  =  new  concat1();
+obj.display();
+	}
+}
+
+
+%>
+
+
+ ?>
