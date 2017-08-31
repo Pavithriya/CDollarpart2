@@ -19,10 +19,14 @@ Note:
 
  After   downloading   the   CDollarpart2  for java /j2ee  professionals
  
-kindly   copy  all    files    from   https://github.com/WilmixInstituteofTechnology/CDollarpart2/tree/master/CDollar/lib
+kindly   copy  all    files    from   https://github.com/WilmixInstituteofTechnology/CDollarpart2/blob/master/lib.rar
 
 
 to    https://github.com/WilmixInstituteofTechnology/CDollarpart2/tree/master/CDollar
+
+and
+
+ https://github.com/WilmixInstituteofTechnology/CDollarpart2/tree/master/CDollar/lib  directories..
 
 so   that    .cdollar  files   will   be  properly   compiled   and  work  properly.
 
