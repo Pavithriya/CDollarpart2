@@ -1,0 +1,46 @@
+<CDollar>
+<USE> wrappers;
+<USE> CUTIL;
+<PACK> DTS
+<%
+    <CLASS> roots
+    {
+        public FLOAT CDollar-MAIN()
+{
+
+VectorList VectorList <NEW> VectorList();
+        <PRINTLN>("Initial size is " + VectorList.size());
+        if(VectorList.isEmpty())
+            <PRINTLN>("The list is empty");
+        else
+            <PRINTLN>("The list is not empty");
+        VectorList.insertElementAt(new MyInteger(2), 0);
+        VectorList.insertElementAt(new MyInteger(6), 1);
+        VectorList.insertElementAt(new MyInteger(1), 0);
+        VectorList.insertElementAt(new MyInteger(4), 2);
+        <PRINTLN>("List size is " + VectorList.size());
+        <PRINTLN>("The list is " + VectorList);
+        int i = VectorList.indexOf(new MyInteger(4));
+        if(i < 0)
+            <PRINTLN>("4 not found");
+        else
+            <PRINTLN>("The index of 4 is " + i);
+        i = VectorList.indexOf(new MyInteger(3));
+        if(i < 0)
+            <PRINTLN>("3 not found");
+        else
+            <PRINTLN>("The index of 3 is " + i);
+        <PRINTLN>("Element at 0 is " + VectorList.elementAt(0));
+        <PRINTLN>("Element at 3 is " + VectorList.elementAt(3));
+        VectorList.removeElementAt(1);
+        <PRINTLN>("The list is " + VectorList);
+        VectorList.removeElementAt(2);
+        <PRINTLN>("The list is " + VectorList);
+        if(VectorList.isEmpty())
+            <PRINTLN>("The list is empty");
+        else
+            <PRINTLN>("The list is not empty");
+        <PRINTLN>("List size is " + VectorList.size());
+%>
+
+?>

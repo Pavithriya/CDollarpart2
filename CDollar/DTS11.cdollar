@@ -1,0 +1,18 @@
+<CDollar>
+
+<USE> CUTIL;
+<PACK> DTS
+<%
+    <CLASS> roots
+    {
+        public FLOAT CDollar-MAIN()
+{
+       <HSET> h <NEW> <HSET>(11);
+
+h.add("ac");
+h.add(5);
+
+<PRINTLN>(""+h.GET());
+%>
+
+?>

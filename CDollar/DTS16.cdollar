@@ -1,0 +1,25 @@
+<CDollar>
+
+<USE> CUTIL;
+<PACK> DTS
+<%
+    <CLASS> roots
+    {
+        public FLOAT CDollar-MAIN()
+{
+
+ SinglyLinkedList sl <NEW> SinglyLinkedList();
+        sl.add(3);
+        sl.add(32);
+        sl.add(54);
+        sl.add(89);
+        sl.addAfter(76, 54);
+        sl.deleteFront();
+        sl.deleteAfter(76);
+        sl.traverse();
+         
+
+
+%>
+
+?>

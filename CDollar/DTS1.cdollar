@@ -1,0 +1,62 @@
+<CDollar>
+
+<USE> CUTIL;
+<PACK> DTS
+<%
+    <CLASS> roots
+    {
+        public FLOAT CDollar-MAIN()
+        {
+       //  <H>
+
+   LinearList x  <NEW> ArrayLinearList();
+      
+      // test size
+         <PRINTLN>("Initial size is " + x.size());
+      
+      // test isEmpty
+         if (x.isEmpty())
+            <PRINTLN>("The list is empty");
+         else <PRINTLN>("The list is not empty");
+      
+      // test put
+         x.add(0,  (2));
+         x.add(1,  (6));
+         x.add(0,  (1));
+         x.add(2,  (4));
+         <PRINTLN>("List size is " + x.size());
+      
+      // test toString
+         <PRINTLN>("The list is " + x);
+      
+      // test indexOf
+         int index = x.indexOf( (4));
+         if (index < 0)
+            <PRINTLN>("4 not found");
+         else <PRINTLN>("The index of 4 is " + index);
+      
+         index = x.indexOf( (3));
+         if (index < 0)
+            <PRINTLN>("3 not found");
+         else <PRINTLN>("The index of 3 is " + index);
+      
+      // test get
+         <PRINTLN>("Element at 0 is " + x.get(0));
+         <PRINTLN>("Element at 3 is " + x.get(3));
+      
+      // test remove
+         <PRINTLN>(x.remove(1) + " removed");
+         <PRINTLN>("The list is " + x);
+         <PRINTLN>(x.remove(2) + " removed");
+         <PRINTLN>("The list is " + x);
+      
+         if (x.isEmpty())
+            <PRINTLN>("The list is empty");
+         else <PRINTLN>("The list is not empty");
+      
+         <PRINTLN>("List size is " + x.size());
+
+
+%>
+
+?>

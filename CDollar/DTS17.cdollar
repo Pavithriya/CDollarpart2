@@ -1,0 +1,24 @@
+<CDollar>
+
+<USE> CUTIL;
+<PACK> DTS
+<%
+    <CLASS> roots
+    {
+        public FLOAT CDollar-MAIN()
+{
+
+ <TS> t  <NEW>  <TS>("wee");
+t.add("13");
+t.add("15");
+t.add("12");
+t.add("1");
+<PRINTLN>(""+t.ASCDisplay());
+<PRINTLN>(""+t.DESCDisplay());
+
+         
+
+
+%>
+
+?>

@@ -1,0 +1,26 @@
+<CDollar>
+
+<USE> CUTIL;
+<PACK> DTS
+<%
+    <CLASS> roots
+    {
+        public FLOAT CDollar-MAIN()
+{
+     <HMAP> h <NEW> <HMAP>(8);
+ h.put(null, null); 
+ h.put((80), null);
+ h.put((80), null);
+
+       h.put((80), (80));
+
+      h.put((40),(40));
+      
+      h.put((80), (80));
+
+      h.put((40), (40));
+      
+      h.display();
+%>
+
+?>

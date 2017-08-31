@@ -1,0 +1,112 @@
+<CDollar>
+
+<USE> CUTIL;
+
+<USE> System.IO;
+<USE>  Securitydb;
+<PACK> HierachialTree
+<%
+    <CLASS> roots
+    {
+        public FLOAT CDollar-MAIN()
+        {
+         
+
+ Bag  tree <NEW> Bag();
+ 
+  Bag  Member <NEW> Bag();
+
+       
+Member.PUT("A","CLASS5");
+Member.PUT("B","CLASS5");
+Member.PUT("C","CLASS5");
+Member.PUT("D","CLASS5");
+Member.PUT("CLASS6","CLASS6");
+ Bag  slibings <NEW> Bag();
+slibings.PUT("A","s1");
+slibings.PUT("A","s2");
+slibings.PUT("B","s11");
+slibings.PUT("B","s21");
+slibings.PUT("C","s12");
+slibings.PUT("C","s22");
+Bag  activity <NEW> Bag();
+activity.PUT("s1","cricket");
+activity.PUT("s2","read");
+activity.PUT("s21","swim");
+activity.PUT("s12","swim");
+tree.PUT(1,Member);
+tree.PUT(2,slibings);
+tree.PUT(3,activity);
+
+
+activity.remove("s1","cricket");
+tree.remove(3,activity);
+tree.PUT(3,activity);
+
+
+
+<PRINTLN>("output="+tree.containsValue(Member));
+              
+  LinkedQueue q <NEW> LinkedQueue(3);
+      // add a few elements
+      q.put((1));
+      q.put((2));
+      q.put((3));
+      q.put((4));
+
+
+      // delete all elements
+      while (!q.isEmpty())
+      {
+         <PRINTLN>("Rear element is " + q.getRearElement());
+         <PRINTLN>("Front element is " + q.getFrontElement());
+         <PRINTLN>("Removed the element " + q.remove());
+      }
+   
+string[] lines = File.ReadAllLines("out.txt");
+	foreach (string line in lines)
+	{
+	    // Do something with the line.
+	    if (line.Length > 80)
+	    {
+		// Important code.
+	    }
+	}
+
+
+CDollar.WDBA.Manipulation.InsertRows(q.toString(),"wil.txt");
+
+
+		
+	<PRINTLN>(" OUTput  from file= "+CDollar.WDBA.Manipulation.retrieve("wil.txt"));
+
+
+	<PRINTLN>(""+CDollar.WDBA.Manipulation.retrieve("wil1.txt"));	 
+
+	
+	Secure.InsertSecure("wil.sdb", 0,"while","while",CDollar.WDBA.Manipulation.retrieve("wil1.txt"));
+
+
+TreeMap t  <NEW>  TreeMap("wee");
+t.add("13");
+t.add("15");
+t.add("12");
+t.add("1");
+
+t.addKey("13");
+t.addKey("15");
+t.addKey("12");
+t.addKey("1");
+<PRINTLN>(""+t.RET());
+
+SortedList h <NEW> SortedList(3);
+      h.Add((80), (80));
+      h.Add((40), (40));
+      h.Add((65), (65));
+    
+     
+      <PRINTLN>(""+h.RET());
+
+%>
+
+?>
